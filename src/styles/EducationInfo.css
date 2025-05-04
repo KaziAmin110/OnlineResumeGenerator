@@ -1,0 +1,10 @@
+.show-btn {
+    width: 50px;
+    border-radius: 0.5rem;
+    padding: 0.25rem;
+    margin-bottom: 25px;
+}
+
+.fields {
+    width: fit-content;
+}
