@@ -23,6 +23,14 @@ const App = () => {
     setPhoneInput(newValue);
   };
 
+  const handleChangeUni = (newUni) => {
+    setUserUniversity(newUni);
+  };
+
+  const handleChangeGpa = (newGpa) => {
+    setUserGpa(newGpa);
+  };
+
   return (
     <div>
       <UserInfo
@@ -33,8 +41,19 @@ const App = () => {
         onEmailChange={handleChangeEmail}
         onPhoneChange={handleChangePhone}
       />
-      <EducationInfo />
-      <Display name={nameInput} email={emailInput} phone={phoneInput} />
+      <EducationInfo
+        university={userUniversity}
+        gpa={userGpa}
+        changeUniversityInput={handleChangeUni}
+        changeGpaInput={handleChangeGpa}
+      />
+      <Display
+        name={nameInput}
+        email={emailInput}
+        phone={phoneInput}
+        university={userUniversity}
+        gpa={userGpa}
+      />
     </div>
   );
 };
