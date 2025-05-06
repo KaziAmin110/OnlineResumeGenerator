@@ -1,11 +1,41 @@
 import React, { useState } from "react";
 
-const ExperienceCard = () => {
-  const [bullets, setBullets] = useState([]);
+const ExperienceCard = ({ experience, onUpdateExperience, descriptions }) => {
   const [description, setDescription] = useState("");
 
+  const handleChangeJobTitle = (event) => {
+    onUpdateExperience((prevExperience) => ({
+      ...prevExperience,
+      job_title: event.target.value,
+    }));
+  };
+
+  const handleChangeCompanyName = (event) => {
+    onUpdateExperience((prevExperience) => ({
+      ...prevExperience,
+      company_name: event.target.value,
+    }));
+  };
+
+  const handleChangeStartDate = (event) => {
+    onUpdateExperience((prevExperience) => ({
+      ...prevExperience,
+      start_date: event.target.value,
+    }));
+  };
+
+  const handleChangeEndDate = (event) => {
+    onUpdateExperience((prevExperience) => ({
+      ...prevExperience,
+      end_date: event.target.value,
+    }));
+  };
+
   const handleAddDescription = (newDescription) => {
-    setBullets([...bullets, newDescription]);
+    onUpdateExperience((prevExperience) => ({
+      ...prevExperience,
+      descriptions: [...descriptions, newDescription],
+    }));
     setDescription("");
   };
 
@@ -16,17 +46,34 @@ const ExperienceCard = () => {
   return (
     <div>
       <h3>Job Title:</h3>
-      <input placeholder="" onChange={(e) => {}} value={1}></input>
+      <input
+        placeholder=""
+        onChange={handleChangeJobTitle}
+        value={experience.job_title}
+      ></input>
       <h3>Company Name:</h3>
-      <input placeholder="" onChange={(e) => {}} value={2}></input>
+      <input
+        placeholder=""
+        onChange={handleChangeCompanyName}
+        value={experience.company_name}
+      ></input>
       <h3>Start Date:</h3>
-      <input placeholder="" onChange={(e) => {}} value={3}></input>
+      <input
+        placeholder=""
+        onChange={handleChangeStartDate}
+        value={experience.start_date}
+      ></input>
       <h3>End Date:</h3>
-      <input placeholder="" onChange={(e) => {}} value={4}></input>
+      <input
+        placeholder=""
+        onChange={handleChangeEndDate}
+        value={experience.end_date}
+      ></input>
+
       <h3>Description List:</h3>
       <ul>
-        {bullets.map((bullet, index) => {
-          return <li key={index}>{bullet}</li>;
+        {experience.descriptions.map((description, index) => {
+          return <li key={index}>{description}</li>;
         })}
       </ul>
       <input

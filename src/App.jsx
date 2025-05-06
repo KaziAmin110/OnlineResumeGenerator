@@ -4,6 +4,7 @@ import UserInfo from "./components/UserInfo";
 import Display from "./components/Display";
 import EducationInfo from "./components/EducationInfo";
 import Experience from "./components/Experience";
+import ExperienceCard from "./components/ExperienceCard";
 
 const App = () => {
   const [nameInput, setNameInput] = useState("");
@@ -11,7 +12,13 @@ const App = () => {
   const [phoneInput, setPhoneInput] = useState("");
   const [userUniversity, setUserUniversity] = useState("");
   const [userGpa, setUserGpa] = useState("");
-  const [workExperience, setWorkExperience] = useState({});
+  const [workExperience, setWorkExperience] = useState({
+    job_title: "Software Engineer",
+    company_name: "Microsoft",
+    start_date: "5/1/2022",
+    end_date: "8/1/2022",
+    descriptions: [],
+  });
 
   const handleChangeName = (newValue) => {
     setNameInput(newValue);
@@ -49,13 +56,20 @@ const App = () => {
         changeUniversityInput={handleChangeUni}
         changeGpaInput={handleChangeGpa}
       />
-      <Experience />
+      <Experience>
+        <ExperienceCard
+          experience={workExperience}
+          onUpdateExperience={setWorkExperience}
+          descriptions={workExperience.descriptions}
+        />
+      </Experience>
       <Display
         name={nameInput}
         email={emailInput}
         phone={phoneInput}
         university={userUniversity}
         gpa={userGpa}
+        experience={workExperience}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ExperienceCard from "./ExperienceCard";
 
-const Experience = () => {
+const Experience = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleVisibility = () => {
@@ -14,7 +14,7 @@ const Experience = () => {
       <button className="show-btn" onClick={toggleVisibility}>
         {isOpen ? "Hide" : "Show"}
       </button>
-      {isOpen && <ExperienceCard />}
+      {isOpen && children}
     </div>
   );
 };
