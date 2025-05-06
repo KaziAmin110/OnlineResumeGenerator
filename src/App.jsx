@@ -3,6 +3,7 @@ import { useState } from "react";
 import UserInfo from "./components/UserInfo";
 import Display from "./components/Display";
 import EducationInfo from "./components/EducationInfo";
+import Experience from "./components/Experience";
 
 const App = () => {
   const [nameInput, setNameInput] = useState("");
@@ -10,6 +11,7 @@ const App = () => {
   const [phoneInput, setPhoneInput] = useState("");
   const [userUniversity, setUserUniversity] = useState("");
   const [userGpa, setUserGpa] = useState("");
+  const [workExperience, setWorkExperience] = useState({});
 
   const handleChangeName = (newValue) => {
     setNameInput(newValue);
@@ -47,6 +49,7 @@ const App = () => {
         changeUniversityInput={handleChangeUni}
         changeGpaInput={handleChangeGpa}
       />
+      <Experience />
       <Display
         name={nameInput}
         email={emailInput}

@@ -14,7 +14,7 @@ const EducationInfo = ({
   };
   return (
     <div className="section">
-      <h1>Education Section</h1>
+      <h1>Education Section:</h1>
       <button className="show-btn" onClick={handleToggle}>
         {isOpen ? "Hide" : "Show"}
       </button>
