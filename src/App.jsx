@@ -66,7 +66,7 @@ const App = () => {
           experience={workExperience}
           onUpdateExperience={setWorkExperience}
           descriptions={workExperience.descriptions}
-          onAddExperience={setExperiences}
+          onChangeExperiences={setExperiences}
         />
       </Experience>
       <Display

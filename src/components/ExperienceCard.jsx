@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import ExperienceDescription from "./ExperienceDescription";
 
 const ExperienceCard = ({
   experience,
   onUpdateExperience,
   descriptions,
-  onAddExperience,
+  onChangeExperiences,
 }) => {
   const [description, setDescription] = useState("");
-  
+
   const handleChangeJobTitle = (event) => {
     onUpdateExperience((prevExperience) => ({
       ...prevExperience,
@@ -49,7 +50,7 @@ const ExperienceCard = ({
   };
 
   const handleAddExperience = (newExperience) => {
-    onAddExperience((prevExperience) => [...prevExperience, newExperience]);
+    onChangeExperiences((prevExperience) => [...prevExperience, newExperience]);
   };
 
   return (
@@ -80,11 +81,9 @@ const ExperienceCard = ({
       ></input>
 
       <h3>Description List:</h3>
-      <ul>
-        {experience.descriptions.map((description, index) => {
-          return <li key={index}>{description}</li>;
-        })}
-      </ul>
+      {descriptions.map((description, index) => {
+        return <ExperienceDescription key={index} description={description} />;
+      })}
       <input
         placeholder=""
         onChange={(e) => {
@@ -92,6 +91,7 @@ const ExperienceCard = ({
         }}
         value={description}
       ></input>
+
       <button onClick={() => handleAddDescription(description)}>
         Add Description
       </button>
