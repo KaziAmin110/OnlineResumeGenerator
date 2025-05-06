@@ -1,6 +1,6 @@
 import React from "react";
 
-const Display = ({ name, email, phone, university, gpa, experience }) => {
+const Display = ({ name, email, phone, university, gpa, experiences }) => {
   return (
     <div>
       <h1>Resume</h1>
@@ -9,7 +9,9 @@ const Display = ({ name, email, phone, university, gpa, experience }) => {
       <h2>{phone}</h2>
       <h2>{university}</h2>
       <h2>{gpa}</h2>
-      <h2>{experience.job_title}</h2>
+      {experiences.map((experience, index) => {
+        return <h2 key={index}>{experience.job_title}</h2>;
+      })}
     </div>
   );
 };

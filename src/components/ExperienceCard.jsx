@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 
-const ExperienceCard = ({ experience, onUpdateExperience, descriptions }) => {
+const ExperienceCard = ({
+  experience,
+  onUpdateExperience,
+  descriptions,
+  onAddExperience,
+}) => {
   const [description, setDescription] = useState("");
-
+  
   const handleChangeJobTitle = (event) => {
     onUpdateExperience((prevExperience) => ({
       ...prevExperience,
@@ -31,6 +36,10 @@ const ExperienceCard = ({ experience, onUpdateExperience, descriptions }) => {
     }));
   };
 
+  const handleChangeDescription = (newDescription) => {
+    setDescription(newDescription);
+  };
+
   const handleAddDescription = (newDescription) => {
     onUpdateExperience((prevExperience) => ({
       ...prevExperience,
@@ -39,8 +48,8 @@ const ExperienceCard = ({ experience, onUpdateExperience, descriptions }) => {
     setDescription("");
   };
 
-  const handleChangeDescription = (newDescription) => {
-    setDescription(newDescription);
+  const handleAddExperience = (newExperience) => {
+    onAddExperience((prevExperience) => [...prevExperience, newExperience]);
   };
 
   return (
@@ -87,7 +96,9 @@ const ExperienceCard = ({ experience, onUpdateExperience, descriptions }) => {
         Add Description
       </button>
 
-      <button>Add Experience</button>
+      <button onClick={() => handleAddExperience(experience)}>
+        Add Experience
+      </button>
     </div>
   );
 };

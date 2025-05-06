@@ -12,12 +12,17 @@ const App = () => {
   const [phoneInput, setPhoneInput] = useState("");
   const [userUniversity, setUserUniversity] = useState("");
   const [userGpa, setUserGpa] = useState("");
+  const [experiences, setExperiences] = useState([]);
   const [workExperience, setWorkExperience] = useState({
     job_title: "Software Engineer",
     company_name: "Microsoft",
     start_date: "5/1/2022",
     end_date: "8/1/2022",
-    descriptions: [],
+    descriptions: [
+      "Worked on React Project",
+      "Added Backend Functionality",
+      "Created Reverse Proxy Server",
+    ],
   });
 
   const handleChangeName = (newValue) => {
@@ -61,6 +66,7 @@ const App = () => {
           experience={workExperience}
           onUpdateExperience={setWorkExperience}
           descriptions={workExperience.descriptions}
+          onAddExperience={setExperiences}
         />
       </Experience>
       <Display
@@ -69,7 +75,7 @@ const App = () => {
         phone={phoneInput}
         university={userUniversity}
         gpa={userGpa}
-        experience={workExperience}
+        experiences={experiences}
       />
     </div>
   );
