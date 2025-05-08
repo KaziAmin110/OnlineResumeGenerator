@@ -12,10 +12,10 @@ const App = () => {
     email: "kaziamin1239@gmail.com",
     phone: "561-436-0853",
   });
-
-  const [userUniversity, setUserUniversity] = useState("");
-  const [userGpa, setUserGpa] = useState("");
-  const [experiences, setExperiences] = useState([]);
+  const [universityInfo, setUniversityInfo] = useState({
+    uni_name: "University of Central Florida",
+    uni_gpa: 3.5,
+  });
   const [workExperience, setWorkExperience] = useState({
     job_title: "Software Engineer",
     company_name: "Microsoft",
@@ -27,34 +27,21 @@ const App = () => {
       "Created Reverse Proxy Server",
     ],
   });
-
-  const handleChangeUni = (newUni) => {
-    setUserUniversity(newUni);
-  };
-
-  const handleChangeGpa = (newGpa) => {
-    setUserGpa(newGpa);
-  };
+  const [experiences, setExperiences] = useState([]);
 
   return (
     <div>
       <Section section_name="Personal Section">
         <PersonalCard
-          nameInput={nameInput}
-          emailInput={emailInput}
-          phoneInput={phoneInput}
-          onNameChange={handleChangeName}
-          onEmailChange={handleChangeEmail}
-          onPhoneChange={handleChangePhone}
+          personal_info={personalInfo}
+          onUpdatePersonalInfo={setPersonalInfo}
         />
       </Section>
 
       <Section section_name="Education Section">
         <EducationCard
-          university={userUniversity}
-          gpa={userGpa}
-          changeUniversityInput={handleChangeUni}
-          changeGpaInput={handleChangeGpa}
+          uni_info={universityInfo}
+          onUpdateUniInfo={setUniversityInfo}
         />
       </Section>
 
@@ -68,11 +55,11 @@ const App = () => {
       </Section>
 
       <Display
-        name={nameInput}
-        email={emailInput}
-        phone={phoneInput}
-        university={userUniversity}
-        gpa={userGpa}
+        name={personalInfo.name}
+        email={personalInfo.email}
+        phone={personalInfo.phone}
+        university={universityInfo.uni_name}
+        gpa={universityInfo.gpa}
         experiences={experiences}
       />
     </div>
