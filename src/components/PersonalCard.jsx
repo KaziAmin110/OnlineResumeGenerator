@@ -2,14 +2,27 @@ import React from "react";
 import { useState } from "react";
 import "../styles/UserInfo.css";
 
-const PersonalCard = ({
-  nameInput,
-  emailInput,
-  phoneInput,
-  onNameChange,
-  onEmailChange,
-  onPhoneChange,
-}) => {
+const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
+  const [name, setName] = useState("Kazi Amin");
+  const [email, setEmail] = useState("kaziamin1239@gmail.com");
+  const [phone, setPhone] = useState("561-436-0853");
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handlePersonalInfoUpdate = () => {
+    onUpdatePersonalInfo({ ...personalInfo, name, email, phone });
+  };
+
   return (
     <div>
       <div className="">
@@ -18,8 +31,8 @@ const PersonalCard = ({
           type="text"
           name="name"
           placeholder="Enter Name:"
-          value={nameInput}
-          onChange={(e) => onNameChange(e.target.value)}
+          value={name}
+          onChange={handleNameChange}
         />
       </div>
       <div>
@@ -28,8 +41,8 @@ const PersonalCard = ({
           type="text"
           name="email"
           placeholder="Enter Email:"
-          value={emailInput}
-          onChange={(e) => onEmailChange(e.target.value)}
+          value={email}
+          onChange={handleEmailChange}
         />
       </div>
       <div>
@@ -38,10 +51,11 @@ const PersonalCard = ({
           type="text"
           name="phone"
           placeholder="Enter Phone:"
-          value={phoneInput}
-          onChange={(e) => onPhoneChange(e.target.value)}
+          value={phone}
+          onChange={handlePhoneChange}
         />
       </div>
+      <button onClick={handlePersonalInfoUpdate}>Save</button>
     </div>
   );
 };

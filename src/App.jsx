@@ -11,11 +11,10 @@ const App = () => {
     name: "Kazi Amin",
     email: "kaziamin1239@gmail.com",
     phone: "561-436-0853",
-  });
-  const [universityInfo, setUniversityInfo] = useState({
     uni_name: "University of Central Florida",
     uni_gpa: 3.5,
   });
+
   const [workExperience, setWorkExperience] = useState({
     job_title: "Software Engineer",
     company_name: "Microsoft",
@@ -33,15 +32,15 @@ const App = () => {
     <div>
       <Section section_name="Personal Section">
         <PersonalCard
-          personal_info={personalInfo}
+          personalInfo={personalInfo}
           onUpdatePersonalInfo={setPersonalInfo}
         />
       </Section>
 
       <Section section_name="Education Section">
         <EducationCard
-          uni_info={universityInfo}
-          onUpdateUniInfo={setUniversityInfo}
+          personalInfo={personalInfo}
+          onUpdateUniversityInfo={setPersonalInfo}
         />
       </Section>
 
@@ -58,8 +57,8 @@ const App = () => {
         name={personalInfo.name}
         email={personalInfo.email}
         phone={personalInfo.phone}
-        university={universityInfo.uni_name}
-        gpa={universityInfo.gpa}
+        university={personalInfo.uni_name}
+        gpa={personalInfo.gpa}
         experiences={experiences}
       />
     </div>

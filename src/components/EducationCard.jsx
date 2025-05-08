@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import "../styles/EducationInfo.css";
 
-const EducationCard = ({
-  university,
-  changeUniversityInput,
-  gpa,
-  changeGpaInput,
-}) => {
+const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
   return (
     <div>
       <h3>Enter University: </h3>
