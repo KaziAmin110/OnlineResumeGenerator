@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ExperienceCard from "./ExperienceCard";
 
-const Experience = ({ children }) => {
+const Section = ({ section_name, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleVisibility = () => {
@@ -10,7 +10,7 @@ const Experience = ({ children }) => {
 
   return (
     <div>
-      <h1>Experience Section:</h1>
+      <h1>{section_name}</h1>
       <button className="show-btn" onClick={toggleVisibility}>
         {isOpen ? "Hide" : "Show"}
       </button>
@@ -19,4 +19,4 @@ const Experience = ({ children }) => {
   );
 };
 
-export default Experience;
+export default Section;

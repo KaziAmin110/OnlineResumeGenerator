@@ -1,15 +1,18 @@
 import React, { use } from "react";
 import { useState } from "react";
-import UserInfo from "./components/UserInfo";
+import PersonalCard from "./components/PersonalCard";
 import Display from "./components/Display";
-import EducationInfo from "./components/EducationInfo";
-import Experience from "./components/Experience";
+import EducationCard from "./components/EducationCard";
+import Section from "./components/Section";
 import ExperienceCard from "./components/ExperienceCard";
 
 const App = () => {
-  const [nameInput, setNameInput] = useState("");
-  const [emailInput, setEmailInput] = useState("");
-  const [phoneInput, setPhoneInput] = useState("");
+  const [personalInfo, setPersonalInfo] = useState({
+    name: "Kazi Amin",
+    email: "kaziamin1239@gmail.com",
+    phone: "561-436-0853",
+  });
+
   const [userUniversity, setUserUniversity] = useState("");
   const [userGpa, setUserGpa] = useState("");
   const [experiences, setExperiences] = useState([]);
@@ -25,18 +28,6 @@ const App = () => {
     ],
   });
 
-  const handleChangeName = (newValue) => {
-    setNameInput(newValue);
-  };
-
-  const handleChangeEmail = (newValue) => {
-    setEmailInput(newValue);
-  };
-
-  const handleChangePhone = (newValue) => {
-    setPhoneInput(newValue);
-  };
-
   const handleChangeUni = (newUni) => {
     setUserUniversity(newUni);
   };
@@ -47,28 +38,35 @@ const App = () => {
 
   return (
     <div>
-      <UserInfo
-        nameInput={nameInput}
-        emailInput={emailInput}
-        phoneInput={phoneInput}
-        onNameChange={handleChangeName}
-        onEmailChange={handleChangeEmail}
-        onPhoneChange={handleChangePhone}
-      />
-      <EducationInfo
-        university={userUniversity}
-        gpa={userGpa}
-        changeUniversityInput={handleChangeUni}
-        changeGpaInput={handleChangeGpa}
-      />
-      <Experience>
+      <Section section_name="Personal Section">
+        <PersonalCard
+          nameInput={nameInput}
+          emailInput={emailInput}
+          phoneInput={phoneInput}
+          onNameChange={handleChangeName}
+          onEmailChange={handleChangeEmail}
+          onPhoneChange={handleChangePhone}
+        />
+      </Section>
+
+      <Section section_name="Education Section">
+        <EducationCard
+          university={userUniversity}
+          gpa={userGpa}
+          changeUniversityInput={handleChangeUni}
+          changeGpaInput={handleChangeGpa}
+        />
+      </Section>
+
+      <Section section_name="Experience Section">
         <ExperienceCard
           experience={workExperience}
           onUpdateExperience={setWorkExperience}
           descriptions={workExperience.descriptions}
           onChangeExperiences={setExperiences}
         />
-      </Experience>
+      </Section>
+
       <Display
         name={nameInput}
         email={emailInput}
