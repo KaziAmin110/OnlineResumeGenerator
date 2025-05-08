@@ -3,9 +3,9 @@ import { useState } from "react";
 import "../styles/UserInfo.css";
 
 const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
-  const [name, setName] = useState("Kazi Amin");
-  const [email, setEmail] = useState("kaziamin1239@gmail.com");
-  const [phone, setPhone] = useState("561-436-0853");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
   const handleNameChange = (e) => {
     setName(e.target.value);

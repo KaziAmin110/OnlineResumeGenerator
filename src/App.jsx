@@ -11,8 +11,8 @@ const App = () => {
     name: "Kazi Amin",
     email: "kaziamin1239@gmail.com",
     phone: "561-436-0853",
-    uni_name: "University of Central Florida",
-    uni_gpa: 3.5,
+    uniName: "University of Central Florida",
+    uniGpa: 3.5,
   });
 
   const [workExperience, setWorkExperience] = useState({
@@ -57,8 +57,8 @@ const App = () => {
         name={personalInfo.name}
         email={personalInfo.email}
         phone={personalInfo.phone}
-        university={personalInfo.uni_name}
-        gpa={personalInfo.gpa}
+        university={personalInfo.uniName}
+        gpa={personalInfo.uniGpa}
         experiences={experiences}
       />
     </div>
