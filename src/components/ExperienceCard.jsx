@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DescriptionList from "./DescriptionList";
+import ExperienceList from "./ExperienceList";
 
 const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   const [jobTitle, setJobTitle] = useState("");
@@ -25,17 +26,26 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   };
 
   const handleAddExperience = () => {
-    onUpdateExperiences(...experiences, {
-      jobTitle,
-      companyName,
-      startDate,
-      endDate,
-      descriptions,
-    });
+    onUpdateExperiences([
+      ...experiences,
+      {
+        jobTitle,
+        companyName,
+        startDate,
+        endDate,
+        descriptions,
+      },
+    ]);
+    setJobTitle("");
+    setCompanyName("");
+    setStartDate("");
+    setEndDate("");
+    setDescriptions([]);
   };
 
   return (
     <div>
+      <ExperienceList experiences={experiences} />
       <div>
         <h3>Job Title:</h3>
         <input
