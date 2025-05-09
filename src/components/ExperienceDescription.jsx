@@ -1,6 +1,6 @@
 import React from "react";
 
-const ExperienceDescription = ({ description, onChangeExperiences }) => {
+const ExperienceDescription = ({ description, onUpdateDescriptions }) => {
   const handleChangeDescription = () => {
     onChangeExperiences();
   };

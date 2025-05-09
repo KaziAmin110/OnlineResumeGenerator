@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ExperienceDescription from "./ExperienceDescription";
+import DescriptionList from "./DescriptionList";
 
 const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   const [descriptionInput, setDescriptionInput] = useState("");
@@ -30,7 +31,8 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   };
 
   const handleAddDescription = () => {
-    setDescriptions(...descriptions, descriptionInput);
+    setDescriptions([...descriptions, descriptionInput]);
+    setDescriptionInput("");
   };
 
   const handleAddExperience = () => {
@@ -81,11 +83,11 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         ></input>
       </div>
 
-      <h3>Description List:</h3>
-      {descriptions.map((description, index) => {
-        return <ExperienceDescription key={index} description={description} />;
-      })}
-
+      <DescriptionList
+        descriptions={descriptions}
+        onUpdateDescriptions={setDescriptions}
+        header="Descriptions:"
+      />
       <input
         placeholder=""
         onChange={handleChangeDescriptionInput}
