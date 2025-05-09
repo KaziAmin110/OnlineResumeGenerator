@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import ExperienceDescription from "./ExperienceDescription";
 import DescriptionList from "./DescriptionList";
 
 const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
-  const [descriptionInput, setDescriptionInput] = useState("");
   const [jobTitle, setJobTitle] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [startDate, setStartDate] = useState("");
@@ -24,15 +22,6 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
 
   const handleChangeEndDate = (e) => {
     setEndDate(e.target.value);
-  };
-
-  const handleChangeDescriptionInput = (e) => {
-    setDescriptionInput(e.target.value);
-  };
-
-  const handleAddDescription = () => {
-    setDescriptions([...descriptions, descriptionInput]);
-    setDescriptionInput("");
   };
 
   const handleAddExperience = () => {
@@ -88,13 +77,6 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         onUpdateDescriptions={setDescriptions}
         header="Descriptions:"
       />
-      <input
-        placeholder=""
-        onChange={handleChangeDescriptionInput}
-        value={descriptionInput}
-      ></input>
-
-      <button onClick={handleAddDescription}>Add Description</button>
       <button onClick={handleAddExperience}>Add Experience</button>
     </div>
   );

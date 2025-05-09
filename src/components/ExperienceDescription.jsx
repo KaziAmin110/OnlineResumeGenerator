@@ -1,13 +1,29 @@
 import React from "react";
 
-const ExperienceDescription = ({ description, onUpdateDescriptions }) => {
-  const handleChangeDescription = () => {
-    onChangeExperiences();
+const ExperienceDescription = ({
+  descriptions,
+  onUpdateDescriptions,
+  description,
+  index,
+}) => {
+  const handleChangeDescription = (e) => {
+    onUpdate(e.target.value);
   };
+
+  const filterRemovedDescription = () => {
+    return descriptions.filter(
+      (description, currentIndex) => currentIndex !== index
+    );
+  };
+
+  const handleRemoveDescription = () => {
+    onUpdateDescriptions(filterRemovedDescription);
+  };
+
   return (
     <div>
       <input onChange={() => {}} value={description}></input>
-      <button>Remove</button>
+      <button onClick={handleRemoveDescription}>Remove</button>
     </div>
   );
 };
