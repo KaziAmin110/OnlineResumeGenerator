@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ExperienceDescription = ({
+const Description = ({
   descriptions,
   onUpdateDescriptions,
   description,
@@ -19,6 +19,16 @@ const ExperienceDescription = ({
     );
   };
 
+  const filterEditDescription = () => {
+    return descriptions.map((description, currentIndex) => {
+      if (currentIndex === index) {
+        return descriptionInput;
+      } else {
+        return description;
+      }
+    });
+  };
+
   const handleRemoveDescription = () => {
     onUpdateDescriptions(filterRemovedDescription);
   };
@@ -29,6 +39,7 @@ const ExperienceDescription = ({
 
   const handleOnSave = () => {
     setIsEditable(!isEditable);
+    onUpdateDescriptions(filterEditDescription);
   };
 
   return (
@@ -51,4 +62,4 @@ const ExperienceDescription = ({
   );
 };
 
-export default ExperienceDescription;
+export default Description;

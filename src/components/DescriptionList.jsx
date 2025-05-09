@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceDescription from "./ExperienceDescription";
+import Description from "./Description";
 import { useState } from "react";
 
 const DescriptionList = ({ descriptions, onUpdateDescriptions, header }) => {
@@ -18,7 +18,7 @@ const DescriptionList = ({ descriptions, onUpdateDescriptions, header }) => {
       <h3>{header}</h3>
       {descriptions.map((description, index) => {
         return (
-          <ExperienceDescription
+          <Description
             key={index}
             descriptions={descriptions}
             onUpdateDescriptions={onUpdateDescriptions}
