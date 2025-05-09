@@ -44,18 +44,21 @@ const Description = ({
 
   return (
     <div>
-      {isEditable ? (
-        <p>{description}</p>
-      ) : (
-        <input
-          value={descriptionInput}
-          onChange={handleChangeDescriptionInput}
-        ></input>
+      {isEditable && (
+        <div>
+          <p>{description}</p>
+          <button onClick={handleOnEdit}>Edit</button>
+        </div>
       )}
-      {isEditable ? (
-        <button onClick={handleOnEdit}>Edit</button>
-      ) : (
-        <button onClick={handleOnSave}>Save</button>
+      {!isEditable && (
+        <div>
+          <input
+            value={descriptionInput}
+            onChange={handleChangeDescriptionInput}
+          ></input>
+
+          <button onClick={handleOnSave}>Save</button>
+        </div>
       )}
       <button onClick={handleRemoveDescription}>Remove</button>
     </div>
