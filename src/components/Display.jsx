@@ -1,6 +1,6 @@
 import React from "react";
 
-const Display = ({ name, email, phone, university, gpa, experiences }) => {
+const Display = ({ personalInfo, experiences }) => {
   return (
     <div>
       <h1>Resume</h1>

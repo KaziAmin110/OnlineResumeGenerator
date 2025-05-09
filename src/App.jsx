@@ -15,17 +15,6 @@ const App = () => {
     uniGpa: 3.5,
   });
 
-  const [workExperience, setWorkExperience] = useState({
-    job_title: "Software Engineer",
-    company_name: "Microsoft",
-    start_date: "5/1/2022",
-    end_date: "8/1/2022",
-    descriptions: [
-      "Worked on React Project",
-      "Added Backend Functionality",
-      "Created Reverse Proxy Server",
-    ],
-  });
   const [experiences, setExperiences] = useState([]);
 
   return (
@@ -46,21 +35,12 @@ const App = () => {
 
       <Section section_name="Experience Section">
         <ExperienceCard
-          experience={workExperience}
-          onUpdateExperience={setWorkExperience}
-          descriptions={workExperience.descriptions}
-          onChangeExperiences={setExperiences}
+          experiences={experiences}
+          onUpdateExperiences={setExperiences}
         />
       </Section>
 
-      <Display
-        name={personalInfo.name}
-        email={personalInfo.email}
-        phone={personalInfo.phone}
-        university={personalInfo.uniName}
-        gpa={personalInfo.uniGpa}
-        experiences={experiences}
-      />
+      <Display personalInfo={personalInfo} experiences={experiences} />
     </div>
   );
 };

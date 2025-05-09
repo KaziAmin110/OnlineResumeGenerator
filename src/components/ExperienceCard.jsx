@@ -1,57 +1,13 @@
 import React, { useState } from "react";
 import ExperienceDescription from "./ExperienceDescription";
 
-const ExperienceCard = ({
-  experience,
-  onUpdateExperience,
-  descriptions,
-  onChangeExperiences,
-}) => {
-  const [description, setDescription] = useState("");
-
-  const handleChangeJobTitle = (event) => {
-    onUpdateExperience((prevExperience) => ({
-      ...prevExperience,
-      job_title: event.target.value,
-    }));
-  };
-
-  const handleChangeCompanyName = (event) => {
-    onUpdateExperience((prevExperience) => ({
-      ...prevExperience,
-      company_name: event.target.value,
-    }));
-  };
-
-  const handleChangeStartDate = (event) => {
-    onUpdateExperience((prevExperience) => ({
-      ...prevExperience,
-      start_date: event.target.value,
-    }));
-  };
-
-  const handleChangeEndDate = (event) => {
-    onUpdateExperience((prevExperience) => ({
-      ...prevExperience,
-      end_date: event.target.value,
-    }));
-  };
-
-  const handleChangeDescription = (newDescription) => {
-    setDescription(newDescription);
-  };
-
-  const handleAddDescription = (newDescription) => {
-    onUpdateExperience((prevExperience) => ({
-      ...prevExperience,
-      descriptions: [...descriptions, newDescription],
-    }));
-    setDescription("");
-  };
-
-  const handleAddExperience = (newExperience) => {
-    onChangeExperiences((prevExperience) => [...prevExperience, newExperience]);
-  };
+const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
+  const [descriptionInput, setDescriptionInput] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [descriptions, setDescriptions] = useState("");
 
   return (
     <div>
@@ -87,9 +43,9 @@ const ExperienceCard = ({
       <input
         placeholder=""
         onChange={(e) => {
-          handleChangeDescription(e.target.value);
+          handleChangeDescriptionInput(e.target.value);
         }}
-        value={description}
+        value={descriptionInput}
       ></input>
 
       <button onClick={() => handleAddDescription(description)}>
