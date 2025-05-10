@@ -45,7 +45,10 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
 
   return (
     <div>
-      <ExperienceList experiences={experiences} />
+      <ExperienceList
+        experiences={experiences}
+        onUpdateExperiences={onUpdateExperiences}
+      />
       <div>
         <h3>Job Title:</h3>
         <input

@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Experience = ({ experience }) => {
+const Experience = ({ experience, onUpdateExperiences, index }) => {
+  const [isEditable, setIsEditable] = useState(false);
+
+  const handleToggleEdit = () => {
+    setIsEditable(!isEditable);
+  };
+
+  const handleRemoveExperience = () => {};
+
   return (
     <div>
+      <button onClick={handleToggleEdit}>Edit</button>
+      <button>Remove</button>
       <h1>{experience.jobTitle}</h1>
       <h1>{experience.companyName}</h1>
       <h1>{experience.startDate}</h1>
