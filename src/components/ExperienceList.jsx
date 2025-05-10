@@ -9,6 +9,7 @@ const ExperienceList = ({ experiences, onUpdateExperiences }) => {
           <Experience
             experience={experience}
             key={index}
+            experiences={experiences}
             onUpdateExperiences={onUpdateExperiences}
             index={index}
           />

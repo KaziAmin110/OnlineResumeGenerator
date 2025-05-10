@@ -1,13 +1,26 @@
 import React, { useState } from "react";
 
-const Experience = ({ experience, onUpdateExperiences, index }) => {
+const Experience = ({
+  experience,
+  experiences,
+  onUpdateExperiences,
+  index,
+}) => {
   const [isEditable, setIsEditable] = useState(false);
 
   const handleToggleEdit = () => {
     setIsEditable(!isEditable);
   };
 
-  const handleRemoveExperience = () => {};
+  const filterCurrentExperience = () => {
+    return experiences.filter(
+      (experience, currentIndex) => currentIndex !== index
+    );
+  };
+
+  const handleRemoveExperience = () => {
+    onUpdateExperiences(filterCurrentExperience);
+  };
 
   return (
     <div>
