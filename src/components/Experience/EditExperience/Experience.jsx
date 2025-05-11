@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import DescriptionList from "../AddExperience/DescriptionList";
 
 const Experience = ({
   experience,
@@ -15,6 +16,7 @@ const Experience = ({
     descriptions: experience.descriptions,
   });
   const [isEditing, setIsEditing] = useState(false);
+  const [descriptions, setDescriptions] = useState(experience.descriptions);
 
   const handleToggleEdit = () => {
     setIsEditing(!isEditing);
@@ -40,7 +42,7 @@ const Experience = ({
   const updateCurrentExperience = () => {
     return experiences.map((experience, currentIndex) => {
       if (currentIndex === index) {
-        return experienceInputs;
+        return { ...experienceInputs, descriptions };
       } else {
         return experience;
       }
@@ -77,6 +79,11 @@ const Experience = ({
             value={experienceInputs.endDate}
             onChange={(e) => handleChangeInput(e, "endDate")}
           ></input>
+          <DescriptionList
+            header="Descriptions:"
+            descriptions={descriptions}
+            onUpdateDescriptions={setDescriptions}
+          />
         </div>
       ) : (
         <div>

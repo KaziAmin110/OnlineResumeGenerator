@@ -48,7 +48,6 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
       <ExperienceList
         experiences={experiences}
         onUpdateExperiences={onUpdateExperiences}
-        onUpdateDescriptions={setDescriptions}
       />
       <div>
         <h3>Job Title:</h3>

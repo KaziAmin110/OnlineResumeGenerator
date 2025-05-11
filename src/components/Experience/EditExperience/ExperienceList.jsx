@@ -1,11 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Experience from "./Experience";
 
-const ExperienceList = ({
-  experiences,
-  onUpdateExperiences,
-  onUpdateDescriptions,
-}) => {
+const ExperienceList = ({ experiences, onUpdateExperiences }) => {
   return (
     <div>
       {experiences.map((experience, index) => {
@@ -15,7 +11,6 @@ const ExperienceList = ({
             key={index}
             experiences={experiences}
             onUpdateExperiences={onUpdateExperiences}
-            onUpdateDescriptions={onUpdateDescriptions}
             index={index}
           />
         );
