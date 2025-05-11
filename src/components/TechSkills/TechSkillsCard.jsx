@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import DescriptionList from "../Experience/AddExperience/DescriptionList";
 import SkillsList from "./SkillsList";
 
 const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
@@ -8,6 +7,7 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
 
   const handleAddSkillsSection = () => {
     setSkillsSection([...skillsSections, skillSectionInput]);
+    setSkillSectionInput("");
   };
 
   const onChangeSkillSectionInput = (e) => {
@@ -16,7 +16,7 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
 
   return (
     <div>
-      <h3>Technical Sections:</h3>
+      <h3>Technical Headers:</h3>
       <SkillsList
         skillsSections={skillsSections}
         onUpdateSkillsSections={setSkillsSection}
@@ -25,7 +25,7 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
         value={skillSectionInput}
         onChange={onChangeSkillSectionInput}
       ></input>
-      <button onClick={handleAddSkillsSection}>Add Section</button>
+      <button onClick={handleAddSkillsSection}>Add Header</button>
     </div>
   );
 };
