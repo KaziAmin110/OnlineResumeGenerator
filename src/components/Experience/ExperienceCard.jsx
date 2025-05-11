@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DescriptionList from "./DescriptionList";
+import DescriptionList from "../DescriptionList";
 import ExperienceList from "./ExperienceList";
 
 const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
@@ -48,6 +48,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
       <ExperienceList
         experiences={experiences}
         onUpdateExperiences={onUpdateExperiences}
+        onUpdateDescriptions={setDescriptions}
       />
       <div>
         <h3>Job Title:</h3>

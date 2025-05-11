@@ -4,6 +4,7 @@ const Experience = ({
   experience,
   experiences,
   onUpdateExperiences,
+  onUpdateDescriptions,
   index,
 }) => {
   const [experienceInputs, setExperienceInputs] = useState({

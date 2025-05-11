@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ExperienceCard from "./ExperienceCard";
+import ExperienceCard from "./Experience/ExperienceCard";
 
 const Section = ({ section_name, children }) => {
   const [isOpen, setIsOpen] = useState(false);

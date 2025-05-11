@@ -1,10 +1,10 @@
 import React, { use } from "react";
 import { useState } from "react";
-import PersonalCard from "./components/PersonalCard";
-import Display from "./components/Display";
-import EducationCard from "./components/EducationCard";
+import PersonalCard from "./components/Personal/PersonalCard";
+import Display from "./components/Display/Display";
+import EducationCard from "./components/Education/EducationCard";
 import Section from "./components/Section";
-import ExperienceCard from "./components/ExperienceCard";
+import ExperienceCard from "./components/Experience/ExperienceCard";
 
 const App = () => {
   const [personalInfo, setPersonalInfo] = useState({

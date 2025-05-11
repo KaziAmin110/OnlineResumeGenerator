@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "../styles/UserInfo.css";
+import "../../styles/UserInfo.css";
 
 const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
   const [name, setName] = useState("");

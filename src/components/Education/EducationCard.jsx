@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/EducationInfo.css";
+import "../../styles/EducationInfo.css";
 
 const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
   const [uniName, setUniName] = useState("");

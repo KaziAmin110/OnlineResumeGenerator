@@ -1,7 +1,11 @@
 import React from "react";
 import Experience from "./Experience";
 
-const ExperienceList = ({ experiences, onUpdateExperiences }) => {
+const ExperienceList = ({
+  experiences,
+  onUpdateExperiences,
+  onUpdateDescriptions,
+}) => {
   return (
     <div>
       {experiences.map((experience, index) => {
@@ -11,6 +15,7 @@ const ExperienceList = ({ experiences, onUpdateExperiences }) => {
             key={index}
             experiences={experiences}
             onUpdateExperiences={onUpdateExperiences}
+            onUpdateDescriptions={onUpdateDescriptions}
             index={index}
           />
         );
