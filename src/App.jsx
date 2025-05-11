@@ -5,6 +5,7 @@ import Display from "./components/Display/Display";
 import EducationCard from "./components/Education/EducationCard";
 import Section from "./components/Section";
 import ExperienceCard from "./components/Experience/ExperienceCard";
+import ProjectCard from "./components/Project/ProjectCard";
 
 const App = () => {
   const [personalInfo, setPersonalInfo] = useState({
@@ -16,6 +17,7 @@ const App = () => {
   });
 
   const [experiences, setExperiences] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   return (
     <div>
@@ -38,6 +40,10 @@ const App = () => {
           experiences={experiences}
           onUpdateExperiences={setExperiences}
         />
+      </Section>
+
+      <Section section_name="Project Section">
+        <ProjectCard projects={projects} onUpdateProjects={setProjects} />
       </Section>
 
       <Display personalInfo={personalInfo} experiences={experiences} />

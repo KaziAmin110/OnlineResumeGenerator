@@ -5,6 +5,7 @@ import ExperienceList from "./EditExperience/ExperienceList.jsx";
 const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   const [jobTitle, setJobTitle] = useState("");
   const [companyName, setCompanyName] = useState("");
+  const [companyLocation, setCompanyLocation] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [descriptions, setDescriptions] = useState([]);
@@ -15,6 +16,10 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
 
   const handleChangeCompanyName = (e) => {
     setCompanyName(e.target.value);
+  };
+
+  const handleChangeCompanyLocation = (e) => {
+    setCompanyLocation(e.target.value);
   };
 
   const handleChangeStartDate = (e) => {
@@ -31,6 +36,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
       {
         jobTitle,
         companyName,
+        companyLocation,
         startDate,
         endDate,
         descriptions,
@@ -38,6 +44,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
     ]);
     setJobTitle("");
     setCompanyName("");
+    setCompanyLocation("");
     setStartDate("");
     setEndDate("");
     setDescriptions([]);
@@ -64,6 +71,15 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
           placeholder=""
           onChange={handleChangeCompanyName}
           value={companyName}
+        ></input>
+      </div>
+
+      <div>
+        <h3>Company Location:</h3>
+        <input
+          placeholder=""
+          onChange={handleChangeCompanyLocation}
+          value={companyLocation}
         ></input>
       </div>
 
