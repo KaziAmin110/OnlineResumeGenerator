@@ -5,7 +5,15 @@ const ProjectList = ({ projects, onUpdateProjects }) => {
   return (
     <div>
       {projects.map((project, index) => {
-        return <Project key={index}/>;
+        return (
+          <Project
+            key={index}
+            project={project}
+            projects={projects}
+            onUpdateProjects={onUpdateProjects}
+            index={index}
+          />
+        );
       })}
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import DescriptionList from "../Experience/AddExperience/DescriptionList";
 import ProjectList from "./ProjectList";
 
@@ -8,7 +8,7 @@ const ProjectCard = ({ projects, onUpdateProjects }) => {
   const [descriptions, setDescriptions] = useState([]);
 
   const handleChangeProjectTitle = (e) => {
-    setJobTitle(e.target.value);
+    setProjectTitle(e.target.value);
   };
 
   const handleAddProject = () => {
@@ -36,11 +36,20 @@ const ProjectCard = ({ projects, onUpdateProjects }) => {
           value={projectTitle}
         ></input>
       </div>
+
       <DescriptionList
         descriptions={descriptions}
         onUpdateDescriptions={setDescriptions}
         header="Project Descriptions:"
       />
+
+      <DescriptionList
+        descriptions={projectTechnologies}
+        onUpdateDescriptions={setProjectTechnologies}
+        header="Project Technologies:"
+        addButtonText="Add Technology"
+      />
+
       <button onClick={handleAddProject}>Add Project</button>
     </div>
   );

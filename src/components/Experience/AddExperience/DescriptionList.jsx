@@ -2,7 +2,12 @@ import React from "react";
 import Description from "./Description";
 import { useState } from "react";
 
-const DescriptionList = ({ descriptions, onUpdateDescriptions, header }) => {
+const DescriptionList = ({
+  descriptions,
+  onUpdateDescriptions,
+  header,
+  addButtonText = "Add Description",
+}) => {
   const [descriptionInput, setDescriptionInput] = useState("");
   const handleChangeDescriptionInput = (e) => {
     setDescriptionInput(e.target.value);
@@ -33,7 +38,7 @@ const DescriptionList = ({ descriptions, onUpdateDescriptions, header }) => {
         value={descriptionInput}
       ></input>
 
-      <button onClick={handleAddDescription}>Add Description</button>
+      <button onClick={handleAddDescription}>{addButtonText}</button>
     </div>
   );
 };
