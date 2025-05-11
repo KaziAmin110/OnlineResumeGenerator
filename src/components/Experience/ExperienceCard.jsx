@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DescriptionList from "../DescriptionList";
-import ExperienceList from "./ExperienceList";
+import DescriptionList from "./AddExperience/DescriptionList.jsx";
+import ExperienceList from "./EditExperience/ExperienceList.jsx";
 
 const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   const [jobTitle, setJobTitle] = useState("");
