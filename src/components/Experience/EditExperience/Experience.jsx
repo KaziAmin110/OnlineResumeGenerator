@@ -11,6 +11,7 @@ const Experience = ({
   const [experienceInputs, setExperienceInputs] = useState({
     jobTitle: experience.jobTitle,
     companyName: experience.companyName,
+    companyLocation: experience.companyLocation,
     startDate: experience.startDate,
     endDate: experience.endDate,
     descriptions: experience.descriptions,
@@ -72,6 +73,10 @@ const Experience = ({
             onChange={(e) => handleChangeInput(e, "companyName")}
           ></input>
           <input
+            value={experienceInputs.companyLocation}
+            onChange={(e) => handleChangeInput(e, "companyLocation")}
+          ></input>
+          <input
             value={experienceInputs.startDate}
             onChange={(e) => handleChangeInput(e, "startDate")}
           ></input>
@@ -89,6 +94,7 @@ const Experience = ({
         <div>
           <h1>{experience.jobTitle}</h1>
           <h1>{experience.companyName}</h1>
+          <h1>{experience.companyLocation}</h1>
           <h1>{experience.startDate}</h1>
           <h1>{experience.endDate}</h1>
           <h1>{experience.descriptions}</h1>
