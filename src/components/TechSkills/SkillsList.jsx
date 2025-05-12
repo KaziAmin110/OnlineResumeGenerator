@@ -7,8 +7,9 @@ const SkillsList = ({ skillsSections, onUpdateSkillsSections }) => {
       {skillsSections.map((section, index) => {
         return (
           <SkillsSection
-            key={index}
+            key={section}
             sectionName={section}
+            skillsSections={skillsSections}
             onUpdateSkillsSection={onUpdateSkillsSections}
             index={index}
           />
