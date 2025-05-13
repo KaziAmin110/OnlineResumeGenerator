@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import Skill from "./Skill.jsx";
 
 const SkillsSection = ({
-  sectionName,
+  section,
   skillsSections,
-  onUpdateSkillsSection,
+  onUpdateSkillsSections,
   index,
 }) => {
-  const [sectionSkills, setSectionSkills] = useState([]);
   const [sectionSkillInput, setSectionSkillInput] = useState("");
-  const [sectionNameInput, setSectionNameInput] = useState(sectionName);
+  const [sectionNameInput, setSectionNameInput] = useState(section.sectionName);
   const [isEditing, setIsEditing] = useState(false);
 
   const handleSectionInput = (e) => {
@@ -20,8 +19,21 @@ const SkillsSection = ({
     setSectionNameInput(e.target.value);
   };
 
+  const onAddNewSkill = () => {
+    return skillsSections.map((section, currentIndex) => {
+      if (currentIndex === index) {
+        return {
+          sectionName: section.sectionName,
+          sectionSkills: [...section.sectionSkills, sectionSkillInput],
+        };
+      } else {
+        return section;
+      }
+    });
+  };
+
   const handleAddSkill = () => {
-    setSectionSkills([...sectionSkills, sectionSkillInput]);
+    onUpdateSkillsSections(onAddNewSkill);
     setSectionSkillInput("");
   };
 
@@ -32,7 +44,10 @@ const SkillsSection = ({
   const handleEditSave = () => {
     return skillsSections.map((section, currentIndex) => {
       if (currentIndex === index) {
-        return sectionNameInput;
+        return {
+          ...section,
+          sectionName: sectionNameInput,
+        };
       } else {
         return section;
       }
@@ -40,7 +55,7 @@ const SkillsSection = ({
   };
 
   const handleSaveSection = () => {
-    onUpdateSkillsSection(handleEditSave);
+    onUpdateSkillsSections(handleEditSave);
     setIsEditing(!isEditing);
   };
 
@@ -51,10 +66,9 @@ const SkillsSection = ({
   };
 
   const handleRemoveSection = () => {
-    onUpdateSkillsSection(filterCurrentSection);
+    onUpdateSkillsSections(filterCurrentSection);
   };
 
-  console.log(sectionName, sectionSkills);
   return (
     <div>
       <div>
@@ -64,7 +78,7 @@ const SkillsSection = ({
             onChange={handleSectionNameInput}
           ></input>
         ) : (
-          <h3>{sectionName}</h3>
+          <h3>{section.sectionName}</h3>
         )}
         <button onClick={handleToggleEdit}>
           {isEditing ? "Cancel" : "Edit"}
@@ -74,14 +88,16 @@ const SkillsSection = ({
         <button onClick={handleRemoveSection}>Remove</button>
       </div>
 
-      {sectionSkills.map((skill, index) => {
+      {section.sectionSkills.map((skill, skillIndex) => {
         return (
           <Skill
             skill={skill}
-            key={index}
-            index={index}
-            skills={sectionSkills}
-            onUpdateSkills={setSectionSkills}
+            key={skillIndex}
+            skillIndex={skillIndex}
+            skills={section.sectionSkills}
+            skillsSections={skillsSections}
+            sectionIndex={index}
+            onUpdateSkillsSections={onUpdateSkillsSections}
           />
         );
       })}

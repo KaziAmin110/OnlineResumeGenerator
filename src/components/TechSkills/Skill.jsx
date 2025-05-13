@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-const Skill = ({ skill, skills, onUpdateSkills, index }) => {
+const Skill = ({
+  skill,
+  skills,
+  skillIndex,
+  skillsSections,
+  sectionIndex,
+  onUpdateSkillsSections,
+}) => {
   const [isEditing, setIsEditing] = useState(false);
   const [skillInput, setSkillInput] = useState(skill);
 
@@ -11,9 +18,9 @@ const Skill = ({ skill, skills, onUpdateSkills, index }) => {
     setSkillInput(e.target.value);
   };
 
-  const handleEditSave = () => {
+  const handleEditSkill = () => {
     return skills.map((skill, currentIndex) => {
-      if (currentIndex === index) {
+      if (currentIndex === skillIndex) {
         return skillInput;
       } else {
         return skill;
@@ -21,17 +28,43 @@ const Skill = ({ skill, skills, onUpdateSkills, index }) => {
     });
   };
 
+  const updateSkillsSectionsEdit = () => {
+    const updatedSkills = handleEditSkill();
+
+    skillsSections.map((section, currentIndex) => {
+      if (currentIndex === sectionIndex) {
+        return {
+          ...section,
+          sectionSkills: updatedSkills,
+        };
+      }
+    });
+  };
+
   const handleSaveSkill = () => {
-    onUpdateSkills(handleEditSave);
+    onUpdateSkillsSections(updateSkillsSectionsEdit);
     setIsEditing(!isEditing);
   };
 
   const filterCurrentSkill = () => {
-    return skills.filter((skill, currentIndex) => currentIndex !== index);
+    return skills.filter((skill, currentIndex) => currentIndex !== skillIndex);
+  };
+
+  const updateSkillsSectionsRemove = () => {
+    const updatedSkills = filterCurrentSkill();
+
+    skillsSections.map((section, currentIndex) => {
+      if (currentIndex === sectionIndex) {
+        return {
+          ...section,
+          sectionSkills: updatedSkills,
+        };
+      }
+    });
   };
 
   const handleRemoveSkill = () => {
-    onUpdateSkills(filterCurrentSkill);
+    onUpdateSkillsSections(updateSkillsSectionsRemove);
   };
 
   return (

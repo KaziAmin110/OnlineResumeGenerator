@@ -6,12 +6,19 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
   const [skillSectionInput, setSkillSectionInput] = useState("");
 
   const handleAddSkillsSection = () => {
-    setSkillsSection([...skillsSections, skillSectionInput]);
+    setSkillsSection([
+      ...skillsSections,
+      { sectionName: skillSectionInput, sectionSkills: [] },
+    ]);
     setSkillSectionInput("");
   };
 
   const onChangeSkillSectionInput = (e) => {
     setSkillSectionInput(e.target.value);
+  };
+
+  const handleSaveTechSection = () => {
+    onUpdateTechSections([...techSections, skillsSections]);
   };
 
   return (
@@ -26,6 +33,7 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
         onChange={onChangeSkillSectionInput}
       ></input>
       <button onClick={handleAddSkillsSection}>Add Header</button>
+      <button onClick={handleSaveTechSection}>Save Headers</button>
     </div>
   );
 };
