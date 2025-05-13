@@ -55,7 +55,12 @@ const App = () => {
         />
       </Section>
 
-      <Display personalInfo={personalInfo} experiences={experiences} />
+      <Display
+        personalInfo={personalInfo}
+        experiences={experiences}
+        projects={projects}
+        techSkillsHeaders={techSections}
+      />
     </div>
   );
 };

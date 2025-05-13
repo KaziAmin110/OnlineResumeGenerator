@@ -1,6 +1,6 @@
 import React from "react";
 
-const Display = ({ personalInfo, experiences }) => {
+const Display = ({ personalInfo, experiences, projects, techSkillsHeaders }) => {
   const { name, email, phone, uniName, uniGpa } = personalInfo;
   return (
     <div>
