@@ -31,12 +31,14 @@ const Skill = ({
   const updateSkillsSectionsEdit = () => {
     const updatedSkills = handleEditSkill();
 
-    skillsSections.map((section, currentIndex) => {
+    return skillsSections.map((section, currentIndex) => {
       if (currentIndex === sectionIndex) {
         return {
           ...section,
           sectionSkills: updatedSkills,
         };
+      } else {
+        return section;
       }
     });
   };
@@ -53,12 +55,14 @@ const Skill = ({
   const updateSkillsSectionsRemove = () => {
     const updatedSkills = filterCurrentSkill();
 
-    skillsSections.map((section, currentIndex) => {
+    return skillsSections.map((section, currentIndex) => {
       if (currentIndex === sectionIndex) {
         return {
           ...section,
           sectionSkills: updatedSkills,
         };
+      } else {
+        return section;
       }
     });
   };
