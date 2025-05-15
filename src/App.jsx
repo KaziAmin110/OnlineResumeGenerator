@@ -21,7 +21,7 @@ const App = () => {
   const [techSections, setTechSections] = useState([]);
 
   return (
-    <div>
+    <div className="main-container">
       <Section section_name="Personal Section">
         <PersonalCard
           personalInfo={personalInfo}
