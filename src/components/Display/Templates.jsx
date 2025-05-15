@@ -6,14 +6,16 @@ const Templates = ({ onUpdateTempIndex }) => {
   };
 
   return (
-    <div>
+    <div className="template-container">
       <h2>Templates:</h2>
-      <button class="" onClick={() => handleUpdateTemplate(1)}>
-        Jake's Resume
-      </button>
-      <button class="" onClick={() => handleUpdateTemplate(2)}>
-        Modern Resume
-      </button>
+      <div className="temp-buttons-container">
+        <button class="" onClick={() => handleUpdateTemplate(1)}>
+          Jake's Resume
+        </button>
+        <button class="" onClick={() => handleUpdateTemplate(2)}>
+          Modern Resume
+        </button>
+      </div>
     </div>
   );
 };

@@ -14,11 +14,12 @@ const Display = ({
 
   return (
     <div className="display-container">
-      <h1>Resume</h1>
+      <h1>Resume:</h1>
       <Templates
         templateIndex={templateIndex}
         onUpdateTempIndex={setTemplateIndex}
       />
+      <button className="download-btn">Download</button>
       <div className="resume-background">
         {templateIndex === 1 && (
           <JakesResumeDisplay
