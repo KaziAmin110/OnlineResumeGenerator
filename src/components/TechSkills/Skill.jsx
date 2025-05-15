@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 const Skill = ({
   skill,
   skills,
@@ -12,6 +12,7 @@ const Skill = ({
 
   const handleToggleEdit = () => {
     setIsEditing(!isEditing);
+    setSkillInput(skill);
   };
 
   const handleChangeInput = (e) => {
@@ -68,6 +69,7 @@ const Skill = ({
   };
 
   const handleRemoveSkill = () => {
+    console.log(updateSkillsSectionsRemove());
     onUpdateSkillsSections(updateSkillsSectionsRemove);
   };
 
@@ -83,7 +85,7 @@ const Skill = ({
       </button>
       {isEditing && <button onClick={handleSaveSkill}>Save</button>}
 
-      <button onClick={handleRemoveSkill}>Remove</button>
+      {!isEditing && <button onClick={handleRemoveSkill}>Remove</button>}
     </div>
   );
 };

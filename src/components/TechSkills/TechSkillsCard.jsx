@@ -18,7 +18,7 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
   };
 
   const handleSaveTechSection = () => {
-    onUpdateTechSections([...techSections, skillsSections]);
+    onUpdateTechSections(skillsSections);
   };
 
   return (

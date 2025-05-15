@@ -1,5 +1,4 @@
-import React, { use } from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import PersonalCard from "./components/Personal/PersonalCard";
 import Display from "./components/Display/Display";
 import EducationCard from "./components/Education/EducationCard";
