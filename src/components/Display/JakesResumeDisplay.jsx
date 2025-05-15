@@ -6,6 +6,8 @@ const JakesResumeDisplay = ({
   projects,
   technicalSkillsHeaders,
 }) => {
+  const { userName, userEmail, userPhone, uniName, uniGpa } = personalInfo;
+
   return (
     <div className="resume-container">
       <h1>Kazi Amin</h1>
