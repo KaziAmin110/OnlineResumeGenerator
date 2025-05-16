@@ -67,7 +67,7 @@ const JakesResumeDisplay = ({
               <span className="entry-meta">January 2024 - May 2024</span>
             </div>
             <div className="split-between company-location">
-              <p className="">University of Central Florida</p>
+              <p className="company-name">University of Central Florida</p>
               <p className="company-city">Orlando, FL</p>
             </div>
 
@@ -97,7 +97,7 @@ const JakesResumeDisplay = ({
               <span className="entry-meta">June 2022 - August 2022</span>
             </div>
             <div className="company-location split-between">
-              <p>Palm Beach County Property Appraiser's Office</p>
+              <p className="company-name">Palm Beach County Property Appraiser's Office</p>
               <p>West Palm Beach, FL</p>
             </div>
 
