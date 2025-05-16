@@ -46,8 +46,12 @@
   width: 100%; 
   height: auto;
   max-width: 820px; 
+  max-height: 1056px;
+  overflow: auto;
   margin: 20px auto; 
   padding: 20px; 
+  padding-left: 40px;
+  padding-right: 40px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,0.1); 
   border: 1px solid #ccc;
@@ -88,9 +92,7 @@
 
 #resume-header {
     text-align: center;
-    margin-bottom: 25px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #eee;
 }
 
 #resume-header .name {
@@ -117,22 +119,22 @@
 
 /* General Section Styling */
 .resume-section {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .section-title {
-    font-size: 1.4em;
-    font-weight: bold;
+    font-size: 1.1em;
+    font-weight: 200;
     color: #333;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ccc; /* Underline for section titles */
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #2b2b2b; /* Underline for section titles */
     text-transform: uppercase; /* Common for resume section titles */
     letter-spacing: 1px;
 }
 
 .section-content .entry {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .section-content .entry:last-child {
@@ -154,21 +156,22 @@
 }
 
 .entry-meta { /* For dates, locations etc. on the right */
-    font-size: 0.9em;
-    font-style: italic;
-    color: #666;
+    font-size: 1.1em;
 }
 
 .degree, .gpa, .company-location {
-    font-size: 0.95em;
-    color: #555;
+    font-size: 1em;
     margin: 0 0 5px 0;
+}
+
+.company-location {
+    font-style: italic;
 }
 
 .project-tech {
     font-size: 0.9em;
     font-style: italic;
-    color: #777;
+    font-weight: 100;
     margin: 2px 0 8px 0;
 }
 
@@ -199,6 +202,11 @@
     color: #333;
 }
 
+.split-between {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* --- Print Specific Styles --- */
 @media print {
@@ -227,8 +235,8 @@
     }
 
     .section-title {
-        color: #000;
-        border-bottom: 1px solid #000;
+        color: #0000009e;
+        border-bottom: 1px solid #2b2b2b;
     }
 
     .entry-title, .entry-meta, .degree, .gpa, .company-location, .project-tech, .details-list li, #technical-skills .skills-category p, #technical-skills .skills-category strong {

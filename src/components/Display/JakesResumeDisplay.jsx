@@ -13,12 +13,17 @@ const JakesResumeDisplay = ({
       <header id="resume-header">
         <h1 className="name">{name}</h1>
         <p className="contact-info">
-          <a href="mailto:kaziamin1239@gmail.com" className="header-info">
+          <a href={"mailto:" + email} className="header-info">
             <strong>Email: </strong>
             {email}
           </a>{" "}
-          -- <strong>Phone: </strong>
-          {phone} -- {" "}
+          --{" "}
+          <a href={"tel:" + phone}>
+            <strong>Phone: </strong>
+            {phone}
+          </a>
+          {"  "}
+          --{"  "}
           <a
             href="https://linkedin.com/in/kazi-amin"
             target="_blank"
@@ -32,27 +37,27 @@ const JakesResumeDisplay = ({
       </header>
 
       <section id="education" className="resume-section">
-        <h2 className="section-title">EDUCATION</h2>
+        <h2 className="section-title">Education</h2>
         <div className="section-content">
           <div className="entry">
             <div className="entry-header">
               <h3 className="entry-title">University of Central Florida</h3>
-              <span className="entry-meta">Graduation: May 2026</span>
+              <span className="entry-meta">
+                <strong>Graduation: May 2026</strong>
+              </span>
             </div>
-            <p className="degree">Bachelor of Science in Computer Science</p>
-            <p className="gpa">GPA: 3.5</p>
-            <ul className="details-list">
-              <li>
-                Academic Achievements: UCF Provost Scholar, Florida Academic
-                Scholar
-              </li>
-            </ul>
+            <div className="split-between">
+              <p className="degree">
+                <em>Bachelor of Science in Computer Science</em>
+              </p>
+              <p className="gpa">GPA: 3.5</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="work-experience" className="resume-section">
-        <h2 className="section-title">WORK EXPERIENCE</h2>
+        <h2 className="section-title">Work Experience</h2>
         <div className="section-content">
           <div className="entry">
             <div className="entry-header">
@@ -61,9 +66,11 @@ const JakesResumeDisplay = ({
               </h3>
               <span className="entry-meta">January 2024 - May 2024</span>
             </div>
-            <p className="company-location">
-              University of Central Florida | Orlando, FL
-            </p>
+            <div className="split-between company-location">
+              <p className="">University of Central Florida</p>
+              <p className="company-city">Orlando, FL</p>
+            </div>
+
             <ul className="details-list">
               <li>
                 Explored the relationship between social media platforms and
@@ -89,10 +96,11 @@ const JakesResumeDisplay = ({
               </h3>
               <span className="entry-meta">June 2022 - August 2022</span>
             </div>
-            <p className="company-location">
-              Palm Beach County Property Appraiser's Office | West Palm Beach,
-              FL
-            </p>
+            <div className="company-location split-between">
+              <p>Palm Beach County Property Appraiser's Office</p>
+              <p>West Palm Beach, FL</p>
+            </div>
+
             <ul className="details-list">
               <li>
                 Optimized property appraisal processes by leveraging SQL and
@@ -115,13 +123,16 @@ const JakesResumeDisplay = ({
       </section>
 
       <section id="projects" className="resume-section">
-        <h2 className="section-title">PROJECTS</h2>
+        <h2 className="section-title">Projects</h2>
         <div className="section-content">
           <div className="entry project-entry">
-            <h3 className="entry-title">Eventify, Backend Lead (Ongoing)</h3>
-            <p className="project-tech">
-              Node.js, Express.js, PostgreSQL, Redis, Jest, BullMQ
-            </p>
+            <div className="split-between">
+              <h3 className="entry-title">Eventify, Backend Lead (Ongoing)</h3>
+              <p className="project-tech">
+                Node.js, Express.js, PostgreSQL, Redis, Jest, BullMQ
+              </p>
+            </div>
+
             <ul className="details-list">
               <li>
                 Developing a full-stack event management platform to help
@@ -142,12 +153,15 @@ const JakesResumeDisplay = ({
             </ul>
           </div>
           <div className="entry project-entry">
-            <h3 className="entry-title">
-              Rate My Peer, Mobile Development Lead
-            </h3>
-            <p className="project-tech">
-              React.js, Flutter, Express, PostgreSQL, Jest
-            </p>
+            <div className="split-between">
+              <h3 className="entry-title">
+                Rate My Peer, Mobile Development Lead
+              </h3>
+              <p className="project-tech">
+                React.js, Flutter, Express, PostgreSQL, Jest
+              </p>
+            </div>
+
             <ul className="details-list">
               <li>
                 Designed and led the development of a full-stack web and mobile
@@ -167,12 +181,15 @@ const JakesResumeDisplay = ({
             </ul>
           </div>
           <div className="entry project-entry">
-            <h3 className="entry-title">
-              YouTube Trending Data Analytics & ETL Pipeline
-            </h3>
-            <p className="project-tech">
-              Python, Apache Airflow, Amazon EC2, Amazon S3
-            </p>
+            <div className="split-between">
+              <h3 className="entry-title">
+                YouTube Trending Data Analytics & ETL Pipeline
+              </h3>
+              <p className="project-tech">
+                Python, Apache Airflow, Amazon EC2, Amazon S3
+              </p>
+            </div>
+
             <ul className="details-list">
               <li>
                 Developed an ETL Data Pipeline using Apache Airflow to extract,
@@ -192,10 +209,13 @@ const JakesResumeDisplay = ({
             </ul>
           </div>
           <div className="entry project-entry">
-            <h3 className="entry-title">Contact Vault, Frontend Lead</h3>
-            <p className="project-tech">
-              Linux, Apache, MySQL, PHP, Docker, Postman
-            </p>
+            <div className="split-between">
+              <h3 className="entry-title">Contact Vault, Frontend Lead</h3>
+              <p className="project-tech">
+                Linux, Apache, MySQL, PHP, Docker, Postman
+              </p>
+            </div>
+
             <ul className="details-list">
               <li>
                 Developed a secure full-stack CRUD web application enabling
