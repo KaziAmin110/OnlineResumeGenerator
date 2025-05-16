@@ -107,7 +107,7 @@
 }
 
 #resume-header .contact-info a {
-    color: #3498db; /* A standard link blue */
+    color: black; /* A standard link blue */
     text-decoration: none;
 }
 
@@ -261,4 +261,8 @@
 /* Optional: @page rule for PDF specific page margins (might be overridden by PDF library settings) */
 @page {
     margin: 0.75in; /* Example margin */
+}
+
+.header-info {
+    color: #000;
 }

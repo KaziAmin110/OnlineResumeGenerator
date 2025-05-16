@@ -14,6 +14,7 @@ const App = () => {
     phone: "561-436-0853",
     uniName: "University of Central Florida",
     uniGpa: 3.5,
+    linkedIn: "linkedin.com/in/kazi-amin/",
   });
 
   const [experiences, setExperiences] = useState([]);

@@ -9,10 +9,10 @@ const Templates = ({ onUpdateTempIndex }) => {
     <div className="template-container">
       <h2>Templates:</h2>
       <div className="temp-buttons-container">
-        <button class="" onClick={() => handleUpdateTemplate(1)}>
+        <button className="" onClick={() => handleUpdateTemplate(1)}>
           Jake's Resume
         </button>
-        <button class="" onClick={() => handleUpdateTemplate(2)}>
+        <button className="" onClick={() => handleUpdateTemplate(2)}>
           Modern Resume
         </button>
       </div>
