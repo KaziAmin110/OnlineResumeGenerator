@@ -237,7 +237,7 @@ const JakesResumeDisplay = ({
       </section>
 
       <section id="technical-skills" className="resume-section">
-        <h2 className="section-title">TECHNICAL SKILLS</h2>
+        <h2 className="section-title">Technical Skills</h2>
         <div className="section-content">
           <div className="skills-category">
             <p>
