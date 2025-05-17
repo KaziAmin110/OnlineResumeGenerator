@@ -103,7 +103,7 @@
 
 #resume-header .contact-info {
     font-size: 0.95em;
-    color: #555;
+    color: #2b2b2b;
 
 }
 
@@ -126,7 +126,7 @@
     font-weight: 200;
     color: #333;
     padding-bottom: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     border-bottom: 1px solid #2b2b2b; /* Underline for section titles */
     text-transform: uppercase; /* Common for resume section titles */
     letter-spacing: 1px;
@@ -191,7 +191,7 @@
 
 /* Technical Skills Section Specifics */
 #technical-skills .skills-category {
-    margin-bottom: 8px;
+    margin-bottom:0px;
 }
 
 #technical-skills .skills-category p {

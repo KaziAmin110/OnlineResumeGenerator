@@ -13,24 +13,21 @@ const JakesResumeDisplay = ({
       <header id="resume-header">
         <h1 className="name">{name}</h1>
         <p className="contact-info">
+          <strong>Email: </strong>
           <a href={"mailto:" + email} className="header-info">
-            <strong>Email: </strong>
             {email}
           </a>{" "}
-          --{" "}
-          <a href={"tel:" + phone}>
-            <strong>Phone: </strong>
-            {phone}
-          </a>
+          -- <strong>Phone: </strong>
+          <a href={"tel:" + phone}>{phone}</a>
           {"  "}
           --{"  "}
+          <strong>Linkedin: </strong>
           <a
             href="https://linkedin.com/in/kazi-amin"
             target="_blank"
             rel="noopener noreferrer"
             className="header-info"
           >
-            <strong>Linkedin: </strong>
             {linkedIn}
           </a>
         </p>
@@ -41,7 +38,7 @@ const JakesResumeDisplay = ({
         <div className="section-content">
           <div className="entry">
             <div className="entry-header">
-              <h3 className="entry-title">University of Central Florida</h3>
+              <h3 className="entry-title">{uniName}</h3>
               <span className="entry-meta">
                 <strong>Graduation: May 2026</strong>
               </span>
@@ -50,7 +47,7 @@ const JakesResumeDisplay = ({
               <p className="degree">
                 <em>Bachelor of Science in Computer Science</em>
               </p>
-              <p className="gpa">GPA: 3.5</p>
+              <p className="gpa">GPA: {uniGpa}</p>
             </div>
           </div>
         </div>
@@ -97,7 +94,9 @@ const JakesResumeDisplay = ({
               <span className="entry-meta">June 2022 - August 2022</span>
             </div>
             <div className="company-location split-between">
-              <p className="company-name">Palm Beach County Property Appraiser's Office</p>
+              <p className="company-name">
+                Palm Beach County Property Appraiser's Office
+              </p>
               <p>West Palm Beach, FL</p>
             </div>
 
