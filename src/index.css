@@ -99,13 +99,12 @@
     font-size: 2.2em; /* Larger font for the name */
     font-weight: bold;
     color: #2c3e50; /* A darker, professional blue/grey */
-    margin: 0 0 5px 0;
 }
 
 #resume-header .contact-info {
     font-size: 0.95em;
     color: #555;
-    margin: 0;
+
 }
 
 #resume-header .contact-info a {
@@ -165,7 +164,6 @@
 
 .degree, .gpa, .company-location {
     font-size: 1em;
-    margin: 0 0 5px 0;
 }
 
 .company-location {
@@ -176,7 +174,7 @@
     font-size: 0.9em;
     font-style: italic;
     font-weight: 100;
-    margin: 2px 0 8px 0;
+    margin: 2px 0 0px 0;
 }
 
 .details-list {
@@ -187,7 +185,7 @@
 
 .details-list li {
     font-size: 0.95em;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     color: #444;
 }
 
