@@ -107,22 +107,21 @@ const JakesResumeDisplay = ({
         <h2 className="section-title">Technical Skills</h2>
         <div className="section-content">
           <div className="skills-category">
-            <p>
-              <strong>Languages & Frameworks:</strong> React.js, Express.js,
-              Node.js, Javascript, Flutter, Jest, HTML, CSS, Dart
-            </p>
-          </div>
-          <div className="skills-category">
-            <p>
-              <strong>Databases:</strong> Relational Databases (PostgreSQL,
-              MySQL), Non-relational Databases (MongoDB)
-            </p>
-          </div>
-          <div className="skills-category">
-            <p>
-              <strong>Developer Tools:</strong> Git, GitHub, Figma, VS Code,
-              Linux, Eclipse, Postman, Supabase, Heroku, Docker, Jira
-            </p>
+            {technicalSkillsHeaders.map((header, index) => {
+              return (
+                <p key={index}>
+                  <strong>{header.sectionName}</strong>: {"  "}
+                  {header.sectionSkills.map((skill, index) => {
+                    return (
+                      <span key={index}>
+                        {skill}
+                        {index < header.sectionSkills.length - 1 && ", "}
+                      </span>
+                    );
+                  })}
+                </p>
+              );
+            })}
           </div>
         </div>
       </section>
