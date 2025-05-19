@@ -37,7 +37,7 @@ const JakesResumeDisplay = ({
         <h2 className="section-title">Education</h2>
         <div className="section-content">
           <div className="entry">
-            <div className="entry-header">
+            <div className="entry-header-between">
               <h3 className="entry-title">{uniName}</h3>
               <span className="entry-meta">
                 <strong>Graduation: May 2026</strong>
@@ -59,7 +59,7 @@ const JakesResumeDisplay = ({
           {experiences.map((experience, index) => {
             return (
               <div className="entry" key={experience.jobTitle}>
-                <div className="entry-header">
+                <div className="entry-header-between">
                   <h3 className="entry-title">{experience.jobTitle}</h3>
                   <span className="entry-meta">
                     {experience.startDate} - {experience.endDate}
@@ -87,8 +87,9 @@ const JakesResumeDisplay = ({
           {projects.map((project, index) => {
             return (
               <div className="entry" key={project.projectTitle}>
-                <div className="entry-header">
+                <div className="entry-header-start">
                   <h3 className="entry-title">{project.projectTitle}</h3>
+                  <h3 className="entry-divider"> | </h3>
                   <p className="project-tech">
                     {project.projectTechnologies.map((technology, index) => {
                       return (
