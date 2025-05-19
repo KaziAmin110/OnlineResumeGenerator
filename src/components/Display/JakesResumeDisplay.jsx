@@ -89,7 +89,17 @@ const JakesResumeDisplay = ({
               <div className="entry" key={project.projectTitle}>
                 <div className="entry-header">
                   <h3 className="entry-title">{project.projectTitle}</h3>
-                  <p className="project-tech">{project.projectTechnologies}</p>
+                  <p className="project-tech">
+                    {project.projectTechnologies.map((technology, index) => {
+                      return (
+                        <span key={index}>
+                          {technology}
+                          {index < project.projectTechnologies.length - 1 &&
+                            ", "}
+                        </span>
+                      );
+                    })}
+                  </p>
                 </div>
 
                 <ul className="details-list">
