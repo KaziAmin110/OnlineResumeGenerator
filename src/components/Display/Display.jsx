@@ -19,7 +19,11 @@ const Display = ({
         templateIndex={templateIndex}
         onUpdateTempIndex={setTemplateIndex}
       />
-      <button className="download-btn">Download</button>
+      <div className="resume-buttons">
+        <button className='download-btn'>Download</button>
+        <button className="print-btn">Print</button>
+      </div>
+
       <div className="resume-background">
         {templateIndex === 1 && (
           <JakesResumeDisplay
