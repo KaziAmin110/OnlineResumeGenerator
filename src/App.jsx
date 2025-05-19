@@ -17,9 +17,109 @@ const App = () => {
     linkedIn: "linkedin.com/in/kazi-amin/",
   });
 
-  const [experiences, setExperiences] = useState([]);
-  const [projects, setProjects] = useState([]);
-  const [techSections, setTechSections] = useState([]);
+  const [experiences, setExperiences] = useState([
+    {
+      jobTitle: "Software Engineer Intern",
+      companyName: "Google",
+      companyLocation: "Mountain View, CA",
+      startDate: "June 2023",
+      endDate: "August 2023",
+      descriptions: [
+        "Worked on a team to develop a new feature for Google Maps.",
+        "Collaborated with cross-functional teams to gather requirements and design solutions.",
+        "Implemented the feature using React and Node.js.",
+      ],
+    },
+    {
+      jobTitle: "Software Engineer Intern",
+      companyName: "Google",
+      companyLocation: "Mountain View, CA",
+      startDate: "June 2023",
+      endDate: "August 2023",
+      descriptions: [
+        "Worked on a team to develop a new feature for Google Maps.",
+        "Collaborated with cross-functional teams to gather requirements and design solutions.",
+        "Implemented the feature using React and Node.js.",
+      ],
+    },
+    {
+      jobTitle: "Software Engineer Intern",
+      companyName: "Google",
+      companyLocation: "Mountain View, CA",
+      startDate: "June 2023",
+      endDate: "August 2023",
+      descriptions: [
+        "Worked on a team to develop a new feature for Google Maps.",
+        "Collaborated with cross-functional teams to gather requirements and design solutions.",
+        "Implemented the feature using React and Node.js.",
+      ],
+    },
+  ]);
+  const [projects, setProjects] = useState([
+    {
+      projectTitle: "Project 1",
+      projectTechnologies: ["React", "Node.js"],
+      descriptions: [
+        "Worked on a team to develop a new feature for Google Maps.",
+        "Collaborated with cross-functional teams to gather requirements and design solutions.",
+        "Implemented the feature using React and Node.js.",
+      ],
+    },
+    {
+      projectTitle: "Project 2",
+      projectTechnologies: ["React", "Node.js"],
+      descriptions: [
+        "Worked on a team to develop a new feature for Google Maps.",
+        "Collaborated with cross-functional teams to gather requirements and design solutions.",
+        "Implemented the feature using React and Node.js.",
+      ],
+    },
+    {
+      projectTitle: "Project 3",
+      projectTechnologies: ["React", "Node.js"],
+      descriptions: [
+        "Worked on a team to develop a new feature for Google Maps.",
+        "Collaborated with cross-functional teams to gather requirements and design solutions.",
+        "Implemented the feature using React and Node.js.",
+      ],
+    },
+    {
+      projectTitle: "Project 4",
+      projectTechnologies: ["React", "Node.js"],
+      descriptions: [
+        "Worked on a team to develop a new feature for Google Maps.",
+        "Collaborated with cross-functional teams to gather requirements and design solutions.",
+        "Implemented the feature using React and Node.js.",
+      ],
+    },
+  ]);
+  const [techSections, setTechSections] = useState([
+    {
+      sectionName: "Languages & Frameworks",
+      sectionSkills: [
+        "React",
+        "Node.js",
+        "JavaScript",
+        "Python",
+        "Java, Express, Flutter, Jest, HTML, CSS, Dart",
+      ],
+    },
+    {
+      sectionName: "Databases",
+      sectionSkills: [
+        "Relational Databases (PostgreSQL, MySQL)",
+        "Non-Relational Databases (MongoDB)",
+      ],
+    },
+    {
+      sectionName: "Development Tools",
+      sectionSkills: [
+        "Git, Github",
+        "Docker",
+        "Jira, Postman, Eclipse, Supabase, Heroku, Figma, Linux",
+      ],
+    },
+  ]);
 
   return (
     <div className="main-container">
