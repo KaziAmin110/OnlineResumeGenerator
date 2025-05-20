@@ -286,7 +286,44 @@
     .no-print { /* Add this class to any elements you don't want in the PDF */
         display: none !important;
     }
+    
 }
+
+
+@media print {
+  /* Apply these styles ONLY when printing/PDFing */
+
+  .resume-container {
+    /* Ensure no extra padding that might interfere with html2pdf's margin option */
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  h1 { font-size: 18pt !important; } /* Reduce header size */
+  h2 { font-size: 14pt !important; }
+  h3 { font-size: 12pt !important; }
+  p, li, span, a { font-size: 10pt !important; line-height: 1.2 !important; } /* Reduce body text/list font size */
+
+  /* Reduce spacing between sections/elements */
+  .resume-section {
+    margin-bottom: 0.25in !important; /* Smaller margin between sections */
+    padding-bottom: 0 !important;
+  }
+  .entry {
+    margin-bottom: 0.1in !important; /* Smaller margin between entries */
+  }
+  .details-list {
+    margin-top: 0.05in !important;
+    margin-bottom: 0.05in !important;
+  }
+  .details-list li {
+    margin-bottom: 0 !important; /* No extra spacing between list items */
+  }
+
+  /* Make sure no hidden scrollbars or elements that might add to height */
+  overflow: visible !important;
+}
+
 
 /* Optional: @page rule for PDF specific page margins (might be overridden by PDF library settings) */
 @page {
