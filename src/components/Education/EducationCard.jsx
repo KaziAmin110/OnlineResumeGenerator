@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../../styles/EducationInfo.css";
 
 const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
-  const [uniName, setUniName] = useState("");
-  const [uniGpa, setUniGpa] = useState("");
+  const [uniName, setUniName] = useState(personalInfo.uniName || "");
+  const [uniGpa, setUniGpa] = useState(personalInfo.uniGpa || "");
 
   const handleUniNameChange = (e) => {
     setUniName(e.target.value);
