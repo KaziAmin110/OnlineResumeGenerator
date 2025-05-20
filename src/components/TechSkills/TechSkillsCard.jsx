@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SkillsList from "./SkillsList";
 
 const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
-  const [skillsSections, setSkillsSection] = useState([]);
+  const [skillsSections, setSkillsSection] = useState(techSections);
   const [skillSectionInput, setSkillSectionInput] = useState("");
 
   const handleAddSkillsSection = () => {
