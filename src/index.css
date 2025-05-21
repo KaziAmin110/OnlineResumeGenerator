@@ -95,8 +95,8 @@
 
 .header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-title {
@@ -119,7 +119,7 @@
 
 #resume-header .contact-info {
     font-size: 0.95em;
-    color: #2b2b2b;
+    color: black;
 
 }
 
@@ -138,7 +138,7 @@
 }
 
 .section-title {
-    font-size: 1.0em;
+    font-size: 0.95em;
     font-weight: 200;
     color: #333;
     padding-bottom: 4px;
@@ -195,6 +195,7 @@
 .contact-info {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 10px;
 }
 
 .degree, .gpa, .company-location {
@@ -222,7 +223,7 @@
 .details-list li {
     font-size: 0.85em;
     margin-bottom: 3px;
-    color: #444;
+    color: black;
 }
 
 /* Technical Skills Section Specifics */
@@ -244,6 +245,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 
 
 /* --- Print Specific Styles --- */

@@ -1,5 +1,5 @@
 import React from "react";
-import { QRCodeSVG} from "qrcode.react";
+import { QRCodeSVG } from "qrcode.react";
 
 const JakesResumeDisplay = React.forwardRef(
   ({ personalInfo, experiences, projects, technicalSkillsHeaders }, ref) => {
@@ -20,7 +20,12 @@ const JakesResumeDisplay = React.forwardRef(
           <div className="header-content">
             <div></div>
             <h1 className="name">{name}</h1>
-            <QRCodeSVG value={linkedIn} size={45} level="H" includeMargin={true} />
+            <QRCodeSVG
+              value={linkedIn}
+              size={45}
+              level="H"
+              includeMargin={true}
+            />
           </div>
           <p className="contact-info">
             <div className="contact-section">

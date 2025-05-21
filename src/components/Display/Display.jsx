@@ -54,9 +54,8 @@ const Display = ({
           onClick={handleDownloadPdf}
           disabled={isLoading}
         >
-          {isLoading ? "Generating PDF..." : "Download PDF"}
+          {isLoading ? "Downloading..." : "Download"}
         </button>
-        <button className="print-btn">Print</button>
       </div>
 
       <div className="resume-background">
