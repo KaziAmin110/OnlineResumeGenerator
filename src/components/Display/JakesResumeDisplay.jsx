@@ -18,23 +18,29 @@ const JakesResumeDisplay = React.forwardRef(
         <header id="resume-header">
           <h1 className="name">{name}</h1>
           <p className="contact-info">
-            <strong>Email: </strong>
-            <a href={"mailto:" + email} className="header-info">
-              {email}
-            </a>{" "}
-            <strong>Phone: </strong>
-            <a href={"tel:" + phone}>{phone}</a>
-            {"  "}
-            {"  "}
-            <strong>Linkedin: </strong>
-            <a
-              href="https://linkedin.com/in/kazi-amin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="header-info"
-            >
-              {linkedIn}
-            </a>
+            <div className="contact-section">
+              <strong>Email: </strong>
+              <a href={"mailto:" + email} className="header-info">
+                {email}
+              </a>{" "}
+            </div>
+
+            <div className="contact-section">
+              <strong>Phone: </strong>
+              <a href={"tel:" + phone}>{phone}</a>
+            </div>
+
+            <div className="contact-section">
+              <strong>Linkedin: </strong>
+              <a
+                href="https://linkedin.com/in/kazi-amin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="header-info"
+              >
+                {linkedIn}
+              </a>
+            </div>
           </p>
         </header>
 
@@ -61,7 +67,7 @@ const JakesResumeDisplay = React.forwardRef(
         <section id="work-experience" className="resume-section">
           <h2 className="section-title">Work Experience</h2>
           <div className="section-content">
-            {experiences.map((experience, index) => {
+            {experiences.map((experience) => {
               return (
                 <div className="entry" key={experience.jobTitle}>
                   <div className="entry-header-between">
@@ -89,7 +95,7 @@ const JakesResumeDisplay = React.forwardRef(
         <section id="projects" className="resume-section">
           <h2 className="section-title">Projects</h2>
           <div className="section-content">
-            {projects.map((project, index) => {
+            {projects.map((project) => {
               return (
                 <div className="entry" key={project.projectTitle}>
                   <div className="entry-header-start">

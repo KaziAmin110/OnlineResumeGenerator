@@ -185,6 +185,11 @@
     color: #444;
 }
 
+.contact-info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .degree, .gpa, .company-location {
     font-size: 1em;
 }
