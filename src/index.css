@@ -93,21 +93,28 @@
 
 /* Jakes Resume Template */
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header-title {
-    text-align: center;
+    justify-self: center;
     font-size: 24px;
 }
 
 
 #resume-header {
     text-align: center;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 }
 
 #resume-header .name {
     font-size: 2.3em; /* Larger font for the name */
-    font-weight: bold;
-    color: #2c3e50; /* A darker, professional blue/grey */
+    margin-left: 25px;
+    font-weight: 600;
+    color: #2b2b2b; /* A darker, professional blue/grey */
 }
 
 #resume-header .contact-info {
