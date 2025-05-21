@@ -114,7 +114,7 @@
     font-size: 2.3em; /* Larger font for the name */
     margin-left: 25px;
     font-weight: 600;
-    color: #2b2b2b; /* A darker, professional blue/grey */
+    color: black; /* A darker, professional blue/grey */
 }
 
 #resume-header .contact-info {
@@ -171,7 +171,7 @@
 .entry-title {
     font-size: 1em;
     font-weight: 600;
-    color: #2b2b2b;
+    color: black;
     margin: 0;
 }
 
@@ -181,7 +181,7 @@
 }
 
 .entry-meta { /* For dates, locations etc. on the right */
-    font-size: 1.05em;
+    font-size: 1em;
 }
 
 .company-name {
@@ -238,7 +238,7 @@
 
 #technical-skills .skills-category strong {
     font-weight: bold;
-    color: #333;
+    color: black;
 }
 
 .split-between {
