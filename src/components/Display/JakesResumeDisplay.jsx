@@ -22,7 +22,7 @@ const JakesResumeDisplay = React.forwardRef(
             <h1 className="name">{name}</h1>
             <QRCodeSVG
               value={linkedIn}
-              size={45}
+              size={40}
               level="H"
               includeMargin={true}
             />
