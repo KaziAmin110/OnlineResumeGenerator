@@ -2,7 +2,16 @@ import React from "react";
 
 const JakesResumeDisplay = React.forwardRef(
   ({ personalInfo, experiences, projects, technicalSkillsHeaders }, ref) => {
-    const { name, email, phone, uniName, uniGpa, linkedIn } = personalInfo;
+    const {
+      name,
+      email,
+      phone,
+      uniName,
+      uniGpa,
+      linkedIn,
+      uniProgram,
+      uniGraduation,
+    } = personalInfo;
 
     return (
       <div className="resume-container" ref={ref}>
@@ -36,12 +45,12 @@ const JakesResumeDisplay = React.forwardRef(
               <div className="entry-header-between">
                 <h3 className="entry-title">{uniName}</h3>
                 <span className="entry-meta">
-                  <strong>Graduation: May 2026</strong>
+                  <strong>Graduation: {uniGraduation}</strong>
                 </span>
               </div>
               <div className="split-between">
                 <p className="degree">
-                  <em>Bachelor of Science in Computer Science</em>
+                  <em>{uniProgram}</em>
                 </p>
                 <p className="gpa">GPA: {uniGpa}</p>
               </div>

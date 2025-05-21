@@ -4,6 +4,8 @@ const personalInfoData = {
   phone: "561-436-0853",
   uniName: "University of Central Florida",
   uniGpa: 3.5,
+  uniProgram: "Bachelor of Science in Computer Science",
+  uniGraduation: "May 2026",
   linkedIn: "linkedin.com/in/kazi-amin/",
 };
 
