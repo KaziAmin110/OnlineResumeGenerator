@@ -101,7 +101,7 @@
 
 #resume-header {
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 #resume-header .name {
@@ -131,7 +131,7 @@
 }
 
 .section-title {
-    font-size: 1.05em;
+    font-size: 1.0em;
     font-weight: 200;
     color: #333;
     padding-bottom: 4px;
@@ -162,7 +162,7 @@
 }
 
 .entry-title {
-    font-size: 1.05em;
+    font-size: 1em;
     font-weight: 600;
     color: #2b2b2b;
     margin: 0;
@@ -178,6 +178,10 @@
 }
 
 .company-name {
+    color: #444;
+}
+
+.company-city {
     color: #444;
 }
 
@@ -204,7 +208,7 @@
 }
 
 .details-list li {
-    font-size: 0.95em;
+    font-size: 0.85em;
     margin-bottom: 3px;
     color: #444;
 }
@@ -319,9 +323,6 @@
   .details-list li {
     margin-bottom: 0 !important; /* No extra spacing between list items */
   }
-
-  /* Make sure no hidden scrollbars or elements that might add to height */
-  overflow: visible !important;
 }
 
 

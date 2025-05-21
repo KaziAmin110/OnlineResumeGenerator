@@ -13,10 +13,10 @@ const JakesResumeDisplay = React.forwardRef(
             <a href={"mailto:" + email} className="header-info">
               {email}
             </a>{" "}
-            -- <strong>Phone: </strong>
+            <strong>Phone: </strong>
             <a href={"tel:" + phone}>{phone}</a>
             {"  "}
-            --{"  "}
+            {"  "}
             <strong>Linkedin: </strong>
             <a
               href="https://linkedin.com/in/kazi-amin"
