@@ -21,38 +21,40 @@ const App = () => {
 
   return (
     <div className="main-container">
-      <Section section_name="Personal Section">
-        <PersonalCard
-          personalInfo={personalInfo}
-          onUpdatePersonalInfo={setPersonalInfo}
-        />
-      </Section>
+      <div className="input-sections-container">
+        <h1 className="title">Resume Builder</h1>
+        <Section section_name="Personal Section">
+          <PersonalCard
+            personalInfo={personalInfo}
+            onUpdatePersonalInfo={setPersonalInfo}
+          />
+        </Section>
 
-      <Section section_name="Education Section">
-        <EducationCard
-          personalInfo={personalInfo}
-          onUpdateUniversityInfo={setPersonalInfo}
-        />
-      </Section>
+        <Section section_name="Education Section">
+          <EducationCard
+            personalInfo={personalInfo}
+            onUpdateUniversityInfo={setPersonalInfo}
+          />
+        </Section>
 
-      <Section section_name="Experience Section">
-        <ExperienceCard
-          experiences={experiences}
-          onUpdateExperiences={setExperiences}
-        />
-      </Section>
+        <Section section_name="Experience Section">
+          <ExperienceCard
+            experiences={experiences}
+            onUpdateExperiences={setExperiences}
+          />
+        </Section>
 
-      <Section section_name="Project Section">
-        <ProjectCard projects={projects} onUpdateProjects={setProjects} />
-      </Section>
+        <Section section_name="Project Section">
+          <ProjectCard projects={projects} onUpdateProjects={setProjects} />
+        </Section>
 
-      <Section section_name="Technical Section">
-        <TechSkillsCard
-          techSections={techSections}
-          onUpdateTechSections={setTechSections}
-        />
-      </Section>
-
+        <Section section_name="Technical Section">
+          <TechSkillsCard
+            techSections={techSections}
+            onUpdateTechSections={setTechSections}
+          />
+        </Section>
+      </div>
       <Display
         personalInfo={personalInfo}
         experiences={experiences}
