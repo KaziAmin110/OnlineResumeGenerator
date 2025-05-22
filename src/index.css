@@ -183,6 +183,24 @@
     font-size: 1em;
 }
 
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 1px solid black;
+    border-radius: 1.25rem;
+    margin-bottom: 10px;
+    padding: 25px;
+}
+
+.experience-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0px 10px;
+}
+
 .company-name {
     color: #444;
 }
@@ -195,6 +213,17 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 3px;
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.date {
+    display: flex;
 }
 
 .degree, .gpa, .company-location {
@@ -211,6 +240,29 @@
     font-weight: 400;
     color: #2b2b2b;
     margin: 2px 0 0px 0;
+}
+
+.preview-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+}
+
+.preview-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.preview-button {
+    background-color: #007bff;
+    color: white;
+    width: 100px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .details-list {

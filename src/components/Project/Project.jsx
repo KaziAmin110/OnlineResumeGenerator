@@ -49,12 +49,16 @@ const Project = ({ project, projects, onUpdateProjects, index }) => {
   };
 
   return (
-    <div>
-      {isEditing && <button onClick={handleSaveProject}>Save</button>}{" "}
-      <button onClick={handleToggleEdit}>
-        {isEditing ? "Cancel" : "Edit"}
-      </button>
-      <button onClick={handleRemoveProject}>Remove</button>
+    <div className="experience-card">
+      <div className="preview-buttons">
+        {isEditing && <button onClick={handleSaveProject} className="preview-button">Save</button>}{" "}
+        <button onClick={handleToggleEdit} className="preview-button">
+          {isEditing ? "Cancel" : "Edit"}
+        </button>
+        <button onClick={handleRemoveProject} className="preview-button">
+          Remove
+        </button>
+      </div>
       {isEditing ? (
         <div>
           <input
@@ -74,10 +78,8 @@ const Project = ({ project, projects, onUpdateProjects, index }) => {
           />
         </div>
       ) : (
-        <div>
+        <div className="preview-container">
           <h1>{project.projectTitle}</h1>
-          <h1>{project.descriptions}</h1>
-          <h1>{project.projectTechnologies}</h1>
         </div>
       )}
     </div>

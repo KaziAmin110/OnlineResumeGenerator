@@ -16,6 +16,7 @@ const Experience = ({
     endDate: experience.endDate,
     descriptions: experience.descriptions,
   });
+
   const [isEditing, setIsEditing] = useState(false);
   const [descriptions, setDescriptions] = useState(experience.descriptions);
 
@@ -56,12 +57,22 @@ const Experience = ({
   };
 
   return (
-    <div>
-      {isEditing && <button onClick={handleSaveExperience}>Save</button>}
-      <button onClick={handleToggleEdit}>
-        {isEditing ? "Cancel" : "Edit"}
-      </button>
-      <button onClick={handleRemoveExperience}>Remove</button>
+    <div className="experience-card">
+      <div className="preview-buttons">
+        {isEditing && (
+          <button onClick={handleSaveExperience} className="preview-button">
+            Save
+          </button>
+        )}
+
+        <button onClick={handleToggleEdit} className="preview-button">
+          {isEditing ? "Cancel" : "Edit"}
+        </button>
+        <button onClick={handleRemoveExperience} className="preview-button">
+          Remove
+        </button>
+      </div>
+
       {isEditing ? (
         <div>
           <input
@@ -91,13 +102,17 @@ const Experience = ({
           />
         </div>
       ) : (
-        <div>
+        <div className="preview-container">
           <h1>{experience.jobTitle}</h1>
-          <h1>{experience.companyName}</h1>
-          <h1>{experience.companyLocation}</h1>
-          <h1>{experience.startDate}</h1>
-          <h1>{experience.endDate}</h1>
-          <h1>{experience.descriptions}</h1>
+          <h2>{experience.companyName}</h2>
+          <div className="date-container">
+            <h3>{experience.companyLocation}</h3>
+            <div className="date">
+              <h3>
+                {experience.startDate} - {experience.endDate}
+              </h3>
+            </div>
+          </div>
         </div>
       )}
     </div>

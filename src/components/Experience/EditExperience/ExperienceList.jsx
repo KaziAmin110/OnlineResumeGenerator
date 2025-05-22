@@ -3,7 +3,7 @@ import Experience from "./Experience";
 
 const ExperienceList = ({ experiences, onUpdateExperiences }) => {
   return (
-    <div>
+    <div className="experience-list">
       {experiences.map((experience, index) => {
         return (
           <Experience

@@ -3,7 +3,7 @@ import Project from "./Project";
 
 const ProjectList = ({ projects, onUpdateProjects }) => {
   return (
-    <div>
+    <div className="experience-list">
       {projects.map((project, index) => {
         return (
           <Project
