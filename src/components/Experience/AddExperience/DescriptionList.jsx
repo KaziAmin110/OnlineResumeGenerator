@@ -19,7 +19,7 @@ const DescriptionList = ({
   };
 
   return (
-    <div>
+    <div className="input-container">
       <h3>{header}</h3>
       {descriptions.map((description, index) => {
         return (

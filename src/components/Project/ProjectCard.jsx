@@ -26,9 +26,9 @@ const ProjectCard = ({ projects, onUpdateProjects }) => {
   };
 
   return (
-    <div>
+    <div className="input-card">
       <ProjectList projects={projects} onUpdateProjects={onUpdateProjects} />
-      <div>
+      <div className="input-container">
         <h3>Project Title:</h3>
         <input
           placeholder=""
