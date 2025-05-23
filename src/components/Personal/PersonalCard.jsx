@@ -24,8 +24,8 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
   };
 
   return (
-    <div>
-      <div className="">
+    <div className="input-card">
+      <div className="input-container">
         <h3>Enter Name: </h3>
         <input
           type="text"
@@ -35,7 +35,7 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
           onChange={handleNameChange}
         />
       </div>
-      <div>
+      <div className="input-container">
         <h3>Enter Email:</h3>
         <input
           type="text"
@@ -45,7 +45,7 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
           onChange={handleEmailChange}
         />
       </div>
-      <div>
+      <div className="input-container">
         <h3>Enter Phone: </h3>
         <input
           type="text"
@@ -55,7 +55,7 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
           onChange={handlePhoneChange}
         />
       </div>
-      <button onClick={handlePersonalInfoUpdate}>Save</button>
+      <button onClick={handlePersonalInfoUpdate} className="save-btn">Save</button>
     </div>
   );
 };
