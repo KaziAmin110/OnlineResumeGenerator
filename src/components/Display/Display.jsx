@@ -24,7 +24,7 @@ const Display = ({
     setIsLoading(true);
 
     const opt = {
-      margin: [0,0],
+      margin: [0.5,0.5,0.75,0.5],
       filename: `${personalInfo.name}-resume.pdf`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 3, logging: true, dpi: 192, letterRendering: true },
