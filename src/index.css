@@ -33,6 +33,17 @@
     flex-grow: 1;
 }
 
+.template-btn {
+    background-color: #007bff;
+    color: white;
+    width: 150px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+
 .resume-background {
     display: flex;
     justify-content: center;
