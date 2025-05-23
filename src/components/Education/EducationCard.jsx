@@ -35,8 +35,8 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="input-card">
+      <div className="input-container">
         <h3>Enter University: </h3>
         <input
           placeholder="Enter University Name:"
@@ -46,7 +46,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
           onChange={handleUniNameChange}
         ></input>
       </div>
-      <div>
+      <div className="input-container">
         <h3>Enter GPA:</h3>
         <input
           placeholder="Enter GPA:"
@@ -56,7 +56,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
           onChange={handleUniGpaChange}
         ></input>
       </div>
-      <div>
+      <div className="input-container">
         <h3>Enter University Degree Program:</h3>
         <input
           placeholder="Enter University Degree:"
@@ -66,7 +66,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
           onChange={handleUniProgramChange}
         ></input>
       </div>
-      <div>
+      <div className="input-container">
         <h3>Enter Estimated Graduation Date:</h3>
         <input
           placeholder="Enter Graduation Date:"
@@ -77,7 +77,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
         ></input>
       </div>
 
-      <button onClick={handleUniversityInfoUpdate}>Save</button>
+      <button onClick={handleUniversityInfoUpdate} className="save-btn">Save</button>
     </div>
   );
 };
