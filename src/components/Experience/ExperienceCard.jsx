@@ -51,12 +51,12 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   };
 
   return (
-    <div>
+    <div className="input-card">
       <ExperienceList
         experiences={experiences}
         onUpdateExperiences={onUpdateExperiences}
       />
-      <div>
+      <div className="input-container">
         <h3>Job Title:</h3>
         <input
           placeholder=""
@@ -65,7 +65,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         ></input>
       </div>
 
-      <div>
+      <div className="input-container">
         <h3>Company Name:</h3>
         <input
           placeholder=""
@@ -74,7 +74,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         ></input>
       </div>
 
-      <div>
+      <div className="input-container">
         <h3>Company Location:</h3>
         <input
           placeholder=""
@@ -83,7 +83,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         ></input>
       </div>
 
-      <div>
+      <div className="input-container">
         <h3>Start Date:</h3>
         <input
           placeholder=""
@@ -92,7 +92,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         ></input>
       </div>
 
-      <div>
+      <div className="input-container">
         <h3>End Date:</h3>
         <input
           placeholder=""
