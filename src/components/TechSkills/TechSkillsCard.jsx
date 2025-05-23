@@ -28,11 +28,15 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
         skillsSections={skillsSections}
         onUpdateSkillsSections={setSkillsSection}
       />
-      <input
-        value={skillSectionInput}
-        onChange={onChangeSkillSectionInput}
-      ></input>
-      <button onClick={handleAddSkillsSection}>Add Header</button>
+      <div className="input-container">
+        <h3>Add New Header:</h3>
+        <input
+          value={skillSectionInput}
+          onChange={onChangeSkillSectionInput}
+        ></input>
+        <button onClick={handleAddSkillsSection}>Add Header</button>
+      </div>
+
       <button onClick={handleSaveTechSection}>Save Headers</button>
     </div>
   );
