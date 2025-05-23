@@ -57,7 +57,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         onUpdateExperiences={onUpdateExperiences}
       />
       <div className="input-container">
-        <h3>Job Title:</h3>
+        <h3>Enter Job Title:</h3>
         <input
           placeholder=""
           onChange={handleChangeJobTitle}
@@ -66,7 +66,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
       </div>
 
       <div className="input-container">
-        <h3>Company Name:</h3>
+        <h3>Enter Company Name:</h3>
         <input
           placeholder=""
           onChange={handleChangeCompanyName}
@@ -75,7 +75,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
       </div>
 
       <div className="input-container">
-        <h3>Company Location:</h3>
+        <h3>Enter Company Location:</h3>
         <input
           placeholder=""
           onChange={handleChangeCompanyLocation}
@@ -84,7 +84,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
       </div>
 
       <div className="input-container">
-        <h3>Start Date:</h3>
+        <h3>Enter Position Start Date:</h3>
         <input
           placeholder=""
           onChange={handleChangeStartDate}
@@ -93,7 +93,7 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
       </div>
 
       <div className="input-container">
-        <h3>End Date:</h3>
+        <h3>Enter Position End Date:</h3>
         <input
           placeholder=""
           onChange={handleChangeEndDate}

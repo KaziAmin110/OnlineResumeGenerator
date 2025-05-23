@@ -22,7 +22,7 @@ const TechSkillsCard = ({ techSections, onUpdateTechSections }) => {
   };
 
   return (
-    <div>
+    <div className="">
       <h3>Technical Headers:</h3>
       <SkillsList
         skillsSections={skillsSections}
