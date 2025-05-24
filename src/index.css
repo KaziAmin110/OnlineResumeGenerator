@@ -215,6 +215,7 @@
 
 .experience-card {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-end;
     border: 1px solid black; 
@@ -284,6 +285,7 @@
     margin: 2px 0 0px 0;
 }
 
+
 .preview-container {
     display: flex;
     flex-direction: column;
@@ -320,6 +322,7 @@
 .input-container {
     display: flex;
     gap: 0.25rem;
+    flex-wrap: wrap;
 }
 
 input {
