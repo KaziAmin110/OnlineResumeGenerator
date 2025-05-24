@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.editable-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-self: flex-start;
+}
+
 .flex-end {
     display: flex;
     width: 100%;

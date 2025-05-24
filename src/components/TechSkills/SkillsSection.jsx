@@ -86,7 +86,7 @@ const SkillsSection = ({
       </div>
 
       {isEditing ? (
-        <div>
+        <div className="editable-container">
           <input
             value={sectionNameInput}
             onChange={handleSectionNameInput}
