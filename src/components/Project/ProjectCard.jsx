@@ -7,8 +7,8 @@ const ProjectCard = ({ projects, onUpdateProjects }) => {
     <div className="input-card">
       <ProjectList projects={projects} onUpdateProjects={onUpdateProjects} />
       <SectionInputs
-        projects={projects}
-        onUpdateProjects={onUpdateProjects}
+        experiences={projects}
+        onUpdateExperiences={onUpdateProjects}
         sectionTitle={"Project"}
       >
         <ProjectInputs
