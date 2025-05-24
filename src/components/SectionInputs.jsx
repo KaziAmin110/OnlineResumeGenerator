@@ -1,6 +1,11 @@
 import { useState } from "react";
 import ExperienceInputs from "./Experience/ExperienceInputs.jsx";
-const SectionInputs = ({ experiences, onUpdateExperiences, sectionTitle }) => {
+const SectionInputs = ({
+  experiences,
+  onUpdateExperiences,
+  sectionTitle,
+  children,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggleOpen = () => {
     setIsOpen(!isOpen);
@@ -19,13 +24,7 @@ const SectionInputs = ({ experiences, onUpdateExperiences, sectionTitle }) => {
       </button>
       {isOpen && <h1 className="input-title">Add {sectionTitle}</h1>}
 
-      {isOpen && (
-        <ExperienceInputs
-          experiences={experiences}
-          onUpdateExperiences={onUpdateExperiences}
-          onUpdateToggle={handleToggleOpen}
-        />
-      )}
+      {isOpen && children}
     </div>
   );
 };
