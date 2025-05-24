@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-const SkillsInputs = ({
-  skillsSections,
-  setSkillsSection,
-  onUpdateTechSections,
-}) => {
+const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
   const [skillSectionInput, setSkillSectionInput] = useState("");
 
   const handleAddSkillsSection = () => {
@@ -17,10 +13,6 @@ const SkillsInputs = ({
 
   const onChangeSkillSectionInput = (e) => {
     setSkillSectionInput(e.target.value);
-  };
-
-  const handleSaveTechSection = () => {
-    onUpdateTechSections(skillsSections);
   };
 
   return (
@@ -38,10 +30,6 @@ const SkillsInputs = ({
           Add
         </button>
       </div>
-
-      {/* <div className="center-div">
-        <button onClick={handleSaveTechSection}>Save</button>
-      </div> */}
     </div>
   );
 };
