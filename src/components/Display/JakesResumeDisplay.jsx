@@ -27,7 +27,7 @@ const JakesResumeDisplay = React.forwardRef(
               includeMargin={true}
             />
           </div>
-          <p className="contact-info">
+          <div className="contact-info">
             <div className="contact-section">
               <strong>Email: </strong>
               <a href={"mailto:" + email} className="header-info">
@@ -51,7 +51,7 @@ const JakesResumeDisplay = React.forwardRef(
                 {linkedIn}
               </a>
             </div>
-          </p>
+          </div>
         </header>
 
         <section id="education" className="resume-section">
