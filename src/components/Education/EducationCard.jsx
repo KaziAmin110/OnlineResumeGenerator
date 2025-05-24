@@ -41,7 +41,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
         <input
           placeholder="Enter University Name:"
           name="university-name"
-          className="fields"
+          className=""
           value={uniName}
           onChange={handleUniNameChange}
         ></input>
@@ -51,7 +51,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
         <input
           placeholder="Enter GPA:"
           name="gpa"
-          className="fields"
+          className=""
           value={uniGpa}
           onChange={handleUniGpaChange}
         ></input>
@@ -61,7 +61,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
         <input
           placeholder="Enter University Degree:"
           name="university-degree-program"
-          className="fields"
+          className=""
           value={uniProgram}
           onChange={handleUniProgramChange}
         ></input>
@@ -71,7 +71,7 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
         <input
           placeholder="Enter Graduation Date:"
           name="university-graduation-date"
-          className="fields"
+          className=""
           value={uniGraduation}
           onChange={handleUniGradDateChange}
         ></input>
