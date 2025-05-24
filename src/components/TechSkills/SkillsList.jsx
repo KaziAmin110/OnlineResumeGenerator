@@ -3,7 +3,7 @@ import SkillsSection from "./SkillsSection";
 
 const SkillsList = ({ skillsSections, onUpdateSkillsSections }) => {
   return (
-    <div>
+    <div className="experience-list">
       {skillsSections.map((section, index) => {
         return (
           <SkillsSection

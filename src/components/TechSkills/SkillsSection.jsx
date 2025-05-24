@@ -70,45 +70,51 @@ const SkillsSection = ({
   };
 
   return (
-    <div>
-      <div>
-        {isEditing ? (
+    <div className="experience-card">
+      <div className="preview-buttons">
+        {isEditing && (
+          <button onClick={handleSaveSection} className="preview-button">
+            Save
+          </button>
+        )}
+        <button onClick={handleToggleEdit} className="preview-button">
+          {isEditing ? "Cancel" : "Edit"}
+        </button>
+        <button onClick={handleRemoveSection} className="preview-button">
+          Remove
+        </button>
+      </div>
+
+      {isEditing ? (
+        <div>
           <input
             value={sectionNameInput}
             onChange={handleSectionNameInput}
           ></input>
-        ) : (
-          <h3>{section.sectionName}</h3>
-        )}
-        <button onClick={handleToggleEdit}>
-          {isEditing ? "Cancel" : "Edit"}
-        </button>
-
-        {isEditing && <button onClick={handleSaveSection}>Save</button>}
-        <button onClick={handleRemoveSection}>Remove</button>
-      </div>
-
-      {isEditing &&
-        section.sectionSkills.map((skill, skillIndex) => {
-          return (
-            <Skill
-              skill={skill}
-              key={skillIndex}
-              skillIndex={skillIndex}
-              skills={section.sectionSkills}
-              skillsSections={skillsSections}
-              sectionIndex={index}
-              onUpdateSkillsSections={onUpdateSkillsSections}
-            />
-          );
-        })}
-      {isEditing && (
-        <div>
-          <input
-            value={sectionSkillInput}
-            onChange={handleSectionInput}
-          ></input>
-          <button onClick={handleAddSkill}>Add Skill</button>
+          {section.sectionSkills.map((skill, skillIndex) => {
+            return (
+              <Skill
+                skill={skill}
+                key={skillIndex}
+                skillIndex={skillIndex}
+                skills={section.sectionSkills}
+                skillsSections={skillsSections}
+                sectionIndex={index}
+                onUpdateSkillsSections={onUpdateSkillsSections}
+              />
+            );
+          })}
+          <div>
+            <input
+              value={sectionSkillInput}
+              onChange={handleSectionInput}
+            ></input>
+            <button onClick={handleAddSkill}>Add Skill</button>
+          </div>
+        </div>
+      ) : (
+        <div className="preview-container">
+          <h1>{section.sectionName}</h1>
         </div>
       )}
     </div>
