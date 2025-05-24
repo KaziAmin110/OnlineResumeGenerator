@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import DescriptionList from "./AddExperience/DescriptionList.jsx";
 import ExperienceList from "./EditExperience/ExperienceList.jsx";
-import ExperienceInputs from "./ExperienceInputs.jsx";
+import SectionInputs from "../SectionInputs.jsx";
 
 const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
   return (
@@ -10,9 +8,10 @@ const ExperienceCard = ({ experiences, onUpdateExperiences }) => {
         experiences={experiences}
         onUpdateExperiences={onUpdateExperiences}
       />
-      <ExperienceInputs
+      <SectionInputs
         experiences={experiences}
         onUpdateExperiences={onUpdateExperiences}
+        sectionTitle={"Experience"}
       />
     </div>
   );
