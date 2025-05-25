@@ -78,7 +78,7 @@ const Skill = ({
       {isEditing ? (
         <input value={skillInput} onChange={handleChangeInput}></input>
       ) : (
-        <p>{"• " + skill}</p>
+        <p className="description">{"• " + skill}</p>
       )}
       {isEditing && (
         <button onClick={handleSaveSkill} className="save-btn">

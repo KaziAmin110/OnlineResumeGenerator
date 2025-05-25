@@ -32,7 +32,7 @@ const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
   return (
     <div className="preview-container">
       <div className="input-container">
-        <h3>Enter Header Name:</h3>
+        <h3 className="input-header">Enter Header Name:</h3>
         <input
           value={skillHeaderInput}
           onChange={onChangeSkillHeaderInput}

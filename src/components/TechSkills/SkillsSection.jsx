@@ -88,7 +88,7 @@ const SkillsSection = ({
       {isEditing ? (
         <div className="preview-container">
           <div className="input-container">
-            <h3>Enter Section Name:</h3>
+            <h3 className="input-header">Enter Section Name:</h3>
             <input
               value={sectionNameInput}
               onChange={handleSectionNameInput}
@@ -96,7 +96,7 @@ const SkillsSection = ({
           </div>
 
           <div className="input-container">
-            <h3>Technical Skills:</h3>
+            <h3 className="input-header">Technical Skills:</h3>
             {section.sectionSkills.map((skill, skillIndex) => {
               return (
                 <Skill
@@ -112,12 +112,12 @@ const SkillsSection = ({
             })}
           </div>
 
-          <div>
+          <div className="description-item-container">
             <input
               value={sectionSkillInput}
               onChange={handleSectionInput}
             ></input>
-            <button onClick={handleAddSkill} className="preview-button">
+            <button onClick={handleAddSkill} className="add-button">
               Add Skill
             </button>
           </div>
