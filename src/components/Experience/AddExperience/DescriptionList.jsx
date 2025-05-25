@@ -20,7 +20,7 @@ const DescriptionList = ({
 
   return (
     <div className="input-container">
-      <h3>{header}</h3>
+      <h3 className="input-header">{header}</h3>
       {descriptions.map((description, index) => {
         return (
           <Description
@@ -32,14 +32,14 @@ const DescriptionList = ({
           />
         );
       })}
-      <div>
+      <div className="description-item-container">
         <input
           placeholder=""
           onChange={handleChangeDescriptionInput}
           value={descriptionInput}
         ></input>
 
-        <button onClick={handleAddDescription} className="preview-button">
+        <button onClick={handleAddDescription} className="add-button">
           {addButtonText}
         </button>
       </div>

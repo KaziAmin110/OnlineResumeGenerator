@@ -9,6 +9,7 @@
     color: white;
     width: fit-content;
     border: none;
+    font-size: 15px;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -16,11 +17,12 @@
 
 .description-item-container {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
 .description {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .editable-container {
@@ -348,12 +350,12 @@
 .input-container {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
     flex-wrap: wrap;
 }
 
 input {
-    width: 250px;
+    min-width: 500px;
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
@@ -367,6 +369,10 @@ input {
     width: 100%;
     margin: 10px 0px;
     padding: 10px;
+}
+
+.input-header {
+    font-size: 1.5em;
 }
 
 .input-title {

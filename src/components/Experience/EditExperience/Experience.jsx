@@ -75,27 +75,27 @@ const Experience = ({
 
       {isEditing ? (
         <div className="preview-container">
-          <h3>Enter Job Title:</h3>
+          <h3 className="input-header">Enter Job Title:</h3>
           <input
             value={experienceInputs.jobTitle}
             onChange={(e) => handleChangeInput(e, "jobTitle")}
           ></input>
-          <h3>Enter Company Name:</h3>
+          <h3 className="input-header">Enter Company Name:</h3>
           <input
             value={experienceInputs.companyName}
             onChange={(e) => handleChangeInput(e, "companyName")}
           ></input>
-          <h3>Enter Company Location:</h3>
+          <h3 className="input-header">Enter Company Location:</h3>
           <input
             value={experienceInputs.companyLocation}
             onChange={(e) => handleChangeInput(e, "companyLocation")}
           ></input>
-          <h3>Enter Start Date:</h3>
+          <h3 className="input-header">Enter Start Date:</h3>
           <input
             value={experienceInputs.startDate}
             onChange={(e) => handleChangeInput(e, "startDate")}
           ></input>
-          <h3>Enter End Date:</h3>
+          <h3 className="input-header">Enter End Date:</h3>
           <input
             value={experienceInputs.endDate}
             onChange={(e) => handleChangeInput(e, "endDate")}
