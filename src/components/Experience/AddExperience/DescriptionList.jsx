@@ -32,13 +32,17 @@ const DescriptionList = ({
           />
         );
       })}
-      <input
-        placeholder=""
-        onChange={handleChangeDescriptionInput}
-        value={descriptionInput}
-      ></input>
+      <div>
+        <input
+          placeholder=""
+          onChange={handleChangeDescriptionInput}
+          value={descriptionInput}
+        ></input>
 
-      <button onClick={handleAddDescription} className="preview-button">{addButtonText}</button>
+        <button onClick={handleAddDescription} className="preview-button">
+          {addButtonText}
+        </button>
+      </div>
     </div>
   );
 };

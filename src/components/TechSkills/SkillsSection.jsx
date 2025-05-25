@@ -109,7 +109,7 @@ const SkillsSection = ({
               value={sectionSkillInput}
               onChange={handleSectionInput}
             ></input>
-            <button onClick={handleAddSkill}>Add Skill</button>
+            <button onClick={handleAddSkill} className="preview-button">Add Skill</button>
           </div>
         </div>
       ) : (
