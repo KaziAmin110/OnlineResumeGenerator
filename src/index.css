@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+.add-button {
+    background-color: rgb(16, 172, 13);
+    color: white;
+    width: fit-content;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.description-item-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.description {
+    font-size: 17px;
+}
+
 .editable-container {
     display: flex;
     width: 100%;
@@ -310,7 +329,7 @@
 .preview-button {
     background-color: #007bff;
     color: white;
-    width: 100px;
+    width: fit-content;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -328,6 +347,7 @@
 
 .input-container {
     display: flex;
+    flex-direction: column;
     gap: 0.25rem;
     flex-wrap: wrap;
 }

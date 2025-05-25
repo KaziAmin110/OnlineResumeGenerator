@@ -43,24 +43,24 @@ const Description = ({
   };
 
   return (
-    <div>
+    <div className="description-item-container">
       {isEditable && (
-        <div>
-          <p>{description}</p>
-          <button onClick={handleOnEdit}>Edit</button>
-        </div>
+        <>
+          <p className="description">{description}</p>
+          <button onClick={handleOnEdit} className="preview-button">Edit</button>
+        </>
       )}
       {!isEditable && (
-        <div>
+        <>
           <input
             value={descriptionInput}
             onChange={handleChangeDescriptionInput}
           ></input>
 
-          <button onClick={handleOnSave}>Save</button>
-        </div>
+          <button onClick={handleOnSave} className="save-btn">Save</button>
+        </>
       )}
-      <button onClick={handleRemoveDescription}>Remove</button>
+      <button onClick={handleRemoveDescription} className="preview-button">Remove</button>
     </div>
   );
 };

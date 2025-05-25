@@ -38,7 +38,7 @@ const DescriptionList = ({
         value={descriptionInput}
       ></input>
 
-      <button onClick={handleAddDescription}>{addButtonText}</button>
+      <button onClick={handleAddDescription} className="preview-button">{addButtonText}</button>
     </div>
   );
 };

@@ -52,7 +52,7 @@ const Project = ({ project, projects, onUpdateProjects, index }) => {
     <div className="experience-card">
       <div className="preview-buttons">
         {isEditing && (
-          <button onClick={handleSaveProject} className="preview-button">
+          <button onClick={handleSaveProject} className="save-btn">
             Save
           </button>
         )}
@@ -67,6 +67,7 @@ const Project = ({ project, projects, onUpdateProjects, index }) => {
 
       {isEditing ? (
         <div>
+          <h3>Project Title</h3>
           <input
             value={projectInputs.projectTitle}
             onChange={(e) => handleChangeInput(e, "projectTitle")}

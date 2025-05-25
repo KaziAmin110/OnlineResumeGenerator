@@ -19,7 +19,10 @@ const SectionInputs = ({
           : "experience-input-containers-close"
       }
     >
-      <button onClick={handleToggleOpen} className="preview-button">
+      <button
+        onClick={handleToggleOpen}
+        className={isOpen ? "preview-button" : "add-button"}
+      >
         {isOpen ? "Cancel" : "Add " + sectionTitle}
       </button>
       {isOpen && <h1 className="input-title">Add {sectionTitle}</h1>}

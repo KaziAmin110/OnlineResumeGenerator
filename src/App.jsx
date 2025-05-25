@@ -48,7 +48,7 @@ const App = () => {
           <ProjectCard projects={projects} onUpdateProjects={setProjects} />
         </Section>
 
-        <Section section_name="Technical Section">
+        <Section section_name="Technical Skills Section">
           <TechSkillsCard
             techSections={techSections}
             onUpdateTechSections={setTechSections}

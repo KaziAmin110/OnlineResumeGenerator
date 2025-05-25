@@ -60,7 +60,7 @@ const Experience = ({
     <div className="experience-card">
       <div className="preview-buttons">
         {isEditing && (
-          <button onClick={handleSaveExperience} className="preview-button">
+          <button onClick={handleSaveExperience} className="save-btn">
             Save
           </button>
         )}
@@ -75,22 +75,27 @@ const Experience = ({
 
       {isEditing ? (
         <div>
+          <h3>Job Title</h3>
           <input
             value={experienceInputs.jobTitle}
             onChange={(e) => handleChangeInput(e, "jobTitle")}
           ></input>
+          <h3>Company Name</h3>
           <input
             value={experienceInputs.companyName}
             onChange={(e) => handleChangeInput(e, "companyName")}
           ></input>
+          <h3>Company Location</h3>
           <input
             value={experienceInputs.companyLocation}
             onChange={(e) => handleChangeInput(e, "companyLocation")}
           ></input>
+          <h3>Start Date</h3>
           <input
             value={experienceInputs.startDate}
             onChange={(e) => handleChangeInput(e, "startDate")}
           ></input>
+          <h3>End Date</h3>
           <input
             value={experienceInputs.endDate}
             onChange={(e) => handleChangeInput(e, "endDate")}
