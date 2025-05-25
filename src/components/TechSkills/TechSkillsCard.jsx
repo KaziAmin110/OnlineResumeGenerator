@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import SkillsList from "./SkillsList";
 import SectionInputs from "../SectionInputs";
 import SkillsInputs from "./SkillsInputs";

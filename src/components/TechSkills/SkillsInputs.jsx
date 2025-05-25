@@ -1,18 +1,32 @@
 import { useState } from "react";
+import DescriptionList from "../Experience/AddExperience/DescriptionList";
 
 const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
-  const [skillSectionInput, setSkillSectionInput] = useState("");
+  const [skills, setSkills] = useState([]);
+  const [skillHeaderInput, setSkillHeaderInput] = useState("");
+  const [skillInput, setSkillInput] = useState("");
 
   const handleAddSkillsSection = () => {
     setSkillsSection([
       ...skillsSections,
-      { sectionName: skillSectionInput, sectionSkills: [] },
+      { sectionName: skillHeaderInput, sectionSkills: skills },
     ]);
-    setSkillSectionInput("");
+    setSkillHeaderInput("");
+    setSkillInput("");
+    setSkills([]);
   };
 
-  const onChangeSkillSectionInput = (e) => {
-    setSkillSectionInput(e.target.value);
+  const handleAddSkill = () => {
+    setSkills([...skills, skillInput]);
+    setSkillInput("");
+  };
+
+  const onChangeSkillHeaderInput = (e) => {
+    setSkillHeaderInput(e.target.value);
+  };
+
+  const onChangeSkillInput = (e) => {
+    setSkillInput(e.target.value);
   };
 
   return (
@@ -20,10 +34,21 @@ const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
       <div className="input-container">
         <h3>Header Name:</h3>
         <input
-          value={skillSectionInput}
-          onChange={onChangeSkillSectionInput}
+          value={skillHeaderInput}
+          onChange={onChangeSkillHeaderInput}
         ></input>
       </div>
+
+      <DescriptionList
+        addButtonText={"Add Skill"}
+        header={"Skills: "}
+        descriptions={skills}
+        onUpdateDescriptions={setSkills}
+      />
+      {/* <div className="input-container">
+        <input onChange={onChangeSkillInput} value={skillInput}></input>
+        <button onClick={handleAddSkill}>Add Skill</button>
+      </div> */}
 
       <div className="center-div">
         <button onClick={handleAddSkillsSection} className="preview-button">
