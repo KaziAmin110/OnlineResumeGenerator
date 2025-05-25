@@ -102,7 +102,7 @@ const ExperienceInputs = ({
         header="Descriptions:"
       />
       <div className="center-div">
-        <button onClick={handleAddExperience} className="preview-button">
+        <button onClick={handleAddExperience} className="save-btn">
           Add
         </button>
       </div>

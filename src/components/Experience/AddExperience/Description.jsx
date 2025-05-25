@@ -46,7 +46,7 @@ const Description = ({
     <div className="description-item-container">
       {isEditable && (
         <>
-          <p className="description">{description}</p>
+          <p className="description">{"• " + description}</p>
           <button onClick={handleOnEdit} className="preview-button">Edit</button>
         </>
       )}

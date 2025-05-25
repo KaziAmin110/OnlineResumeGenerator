@@ -32,7 +32,7 @@ const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
   return (
     <div className="preview-container">
       <div className="input-container">
-        <h3>Header Name:</h3>
+        <h3>Enter Header Name:</h3>
         <input
           value={skillHeaderInput}
           onChange={onChangeSkillHeaderInput}
@@ -45,13 +45,9 @@ const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
         descriptions={skills}
         onUpdateDescriptions={setSkills}
       />
-      {/* <div className="input-container">
-        <input onChange={onChangeSkillInput} value={skillInput}></input>
-        <button onClick={handleAddSkill}>Add Skill</button>
-      </div> */}
-
+      
       <div className="center-div">
-        <button onClick={handleAddSkillsSection} className="preview-button">
+        <button onClick={handleAddSkillsSection} className="save-btn">
           Add
         </button>
       </div>

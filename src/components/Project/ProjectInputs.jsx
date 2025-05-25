@@ -26,7 +26,7 @@ const ProjectInputs = ({ projects, onUpdateProjects }) => {
   return (
     <div className="preview-container">
       <div className="input-container">
-        <h3>Project Title:</h3>
+        <h3>Enter Project Title:</h3>
         <input
           placeholder=""
           onChange={handleChangeProjectTitle}
@@ -47,7 +47,7 @@ const ProjectInputs = ({ projects, onUpdateProjects }) => {
         addButtonText="Add Technology"
       />
       <div className="center-div">
-        <button onClick={handleAddProject} className="preview-button">
+        <button onClick={handleAddProject} className="save-btn">
           Add
         </button>
       </div>

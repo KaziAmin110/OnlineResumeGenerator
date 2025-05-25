@@ -66,8 +66,8 @@ const Project = ({ project, projects, onUpdateProjects, index }) => {
       </div>
 
       {isEditing ? (
-        <div>
-          <h3>Project Title</h3>
+        <div className="preview-container">
+          <h3>Enter Project Title:</h3>
           <input
             value={projectInputs.projectTitle}
             onChange={(e) => handleChangeInput(e, "projectTitle")}

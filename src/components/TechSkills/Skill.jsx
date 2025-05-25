@@ -74,18 +74,23 @@ const Skill = ({
   };
 
   return (
-    <div>
+    <div className="description-item-container">
       {isEditing ? (
         <input value={skillInput} onChange={handleChangeInput}></input>
       ) : (
-        <p>{skill}</p>
+        <p>{"• " + skill}</p>
       )}
-      <button onClick={handleToggleEdit}>
+      {isEditing && (
+        <button onClick={handleSaveSkill} className="save-btn">
+          Save
+        </button>
+      )}
+      <button onClick={handleToggleEdit} className="preview-button">
         {isEditing ? "Cancel" : "Edit"}
       </button>
-      {isEditing && <button onClick={handleSaveSkill}>Save</button>}
-
-      {!isEditing && <button onClick={handleRemoveSkill}>Remove</button>}
+      <button onClick={handleRemoveSkill} className="preview-button">
+        Remove
+      </button>
     </div>
   );
 };

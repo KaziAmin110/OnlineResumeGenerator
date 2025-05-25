@@ -73,7 +73,7 @@ const SkillsSection = ({
     <div className="experience-card">
       <div className="preview-buttons">
         {isEditing && (
-          <button onClick={handleSaveSection} className="preview-button">
+          <button onClick={handleSaveSection} className="save-btn">
             Save
           </button>
         )}
@@ -86,30 +86,40 @@ const SkillsSection = ({
       </div>
 
       {isEditing ? (
-        <div className="editable-container">
-          <input
-            value={sectionNameInput}
-            onChange={handleSectionNameInput}
-          ></input>
-          {section.sectionSkills.map((skill, skillIndex) => {
-            return (
-              <Skill
-                skill={skill}
-                key={skillIndex}
-                skillIndex={skillIndex}
-                skills={section.sectionSkills}
-                skillsSections={skillsSections}
-                sectionIndex={index}
-                onUpdateSkillsSections={onUpdateSkillsSections}
-              />
-            );
-          })}
+        <div className="preview-container">
+          <div className="input-container">
+            <h3>Enter Section Name:</h3>
+            <input
+              value={sectionNameInput}
+              onChange={handleSectionNameInput}
+            ></input>
+          </div>
+
+          <div className="input-container">
+            <h3>Technical Skills:</h3>
+            {section.sectionSkills.map((skill, skillIndex) => {
+              return (
+                <Skill
+                  skill={skill}
+                  key={skillIndex}
+                  skillIndex={skillIndex}
+                  skills={section.sectionSkills}
+                  skillsSections={skillsSections}
+                  sectionIndex={index}
+                  onUpdateSkillsSections={onUpdateSkillsSections}
+                />
+              );
+            })}
+          </div>
+
           <div>
             <input
               value={sectionSkillInput}
               onChange={handleSectionInput}
             ></input>
-            <button onClick={handleAddSkill} className="preview-button">Add Skill</button>
+            <button onClick={handleAddSkill} className="preview-button">
+              Add Skill
+            </button>
           </div>
         </div>
       ) : (
