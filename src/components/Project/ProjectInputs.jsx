@@ -26,7 +26,7 @@ const ProjectInputs = ({ projects, onUpdateProjects }) => {
   return (
     <div className="preview-container">
       <div className="input-container">
-        <h3>Enter Project Title:</h3>
+        <h3 className="input-header">Enter Project Title:</h3>
         <input
           placeholder=""
           onChange={handleChangeProjectTitle}

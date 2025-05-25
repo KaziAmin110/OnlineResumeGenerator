@@ -25,8 +25,8 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
 
   return (
     <div className="input-card">
-      <div className="input-container">
-        <h3>Enter Name: </h3>
+      <div className="preview-container">
+        <h3 className="input-header">Enter Name: </h3>
         <input
           type="text"
           name="name"
@@ -35,8 +35,8 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
           onChange={handleNameChange}
         />
       </div>
-      <div className="input-container">
-        <h3>Enter Email:</h3>
+      <div className="preview-container">
+        <h3 className="input-header">Enter Email:</h3>
         <input
           type="text"
           name="email"
@@ -45,8 +45,8 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
           onChange={handleEmailChange}
         />
       </div>
-      <div className="input-container">
-        <h3>Enter Phone: </h3>
+      <div className="preview-container">
+        <h3 className="input-header">Enter Phone: </h3>
         <input
           type="text"
           name="phone"

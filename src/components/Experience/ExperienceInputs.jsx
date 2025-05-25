@@ -57,7 +57,7 @@ const ExperienceInputs = ({
   return (
     <div className="preview-container">
       <div className="input-container">
-        <h3>Enter Job Title:</h3>
+        <h3 className="input-header">Enter Job Title:</h3>
         <input
           placeholder=""
           onChange={handleChangeJobTitle}
@@ -65,7 +65,7 @@ const ExperienceInputs = ({
         ></input>
       </div>
       <div className="input-container">
-        <h3>Enter Company Name:</h3>
+        <h3 className="input-header">Enter Company Name:</h3>
         <input
           placeholder=""
           onChange={handleChangeCompanyName}
@@ -73,7 +73,7 @@ const ExperienceInputs = ({
         ></input>
       </div>
       <div className="input-container">
-        <h3>Enter Company Location:</h3>
+        <h3 className="input-header">Enter Company Location:</h3>
         <input
           placeholder=""
           onChange={handleChangeCompanyLocation}
@@ -81,7 +81,7 @@ const ExperienceInputs = ({
         ></input>
       </div>
       <div className="input-container">
-        <h3>Enter Position Start Date:</h3>
+        <h3 className="input-header">Enter Position Start Date:</h3>
         <input
           placeholder=""
           onChange={handleChangeStartDate}
@@ -89,7 +89,7 @@ const ExperienceInputs = ({
         ></input>
       </div>
       <div className="input-container">
-        <h3>Enter Position End Date:</h3>
+        <h3 className="input-header">Enter Position End Date:</h3>
         <input
           placeholder=""
           onChange={handleChangeEndDate}
@@ -102,7 +102,7 @@ const ExperienceInputs = ({
         header="Descriptions:"
       />
       <div className="center-div">
-        <button onClick={handleAddExperience} className="save-btn">
+        <button onClick={handleAddExperience} className="add-button">
           Add
         </button>
       </div>

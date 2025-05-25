@@ -36,8 +36,8 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
 
   return (
     <div className="input-card">
-      <div className="input-container">
-        <h3>Enter University: </h3>
+      <div className="preview-container">
+        <h3 className="input-header">Enter University: </h3>
         <input
           placeholder="Enter University Name:"
           name="university-name"
@@ -46,8 +46,8 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
           onChange={handleUniNameChange}
         ></input>
       </div>
-      <div className="input-container">
-        <h3>Enter GPA:</h3>
+      <div className="preview-container">
+        <h3 className="input-header">Enter GPA:</h3>
         <input
           placeholder="Enter GPA:"
           name="gpa"
@@ -56,8 +56,8 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
           onChange={handleUniGpaChange}
         ></input>
       </div>
-      <div className="input-container">
-        <h3>Enter University Degree Program:</h3>
+      <div className="preview-container">
+        <h3 className="input-header">Enter University Degree Program:</h3>
         <input
           placeholder="Enter University Degree:"
           name="university-degree-program"
@@ -66,18 +66,19 @@ const EducationCard = ({ personalInfo, onUpdateUniversityInfo }) => {
           onChange={handleUniProgramChange}
         ></input>
       </div>
-      <div className="input-container">
-        <h3>Enter Estimated Graduation Date:</h3>
+      <div className="preview-container">
+        <h3 className="input-header">Enter Estimated Graduation Date:</h3>
         <input
           placeholder="Enter Graduation Date:"
           name="university-graduation-date"
-          className=""
           value={uniGraduation}
           onChange={handleUniGradDateChange}
         ></input>
       </div>
 
-      <button onClick={handleUniversityInfoUpdate} className="save-btn">Save</button>
+      <button onClick={handleUniversityInfoUpdate} className="save-btn">
+        Save
+      </button>
     </div>
   );
 };
