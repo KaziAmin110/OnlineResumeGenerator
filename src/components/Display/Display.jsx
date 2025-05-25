@@ -1,4 +1,4 @@
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import html2pdf from "html2pdf.js";
 import "./Templates.jsx";
 import Templates from "./Templates.jsx";
@@ -24,7 +24,7 @@ const Display = ({
     setIsLoading(true);
 
     const opt = {
-      margin: [0,0,0.25,0],
+      margin: [0, 0, 0.25, 0],
       filename: `${personalInfo.name}-resume.pdf`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 3, logging: true, dpi: 192, letterRendering: true },
@@ -38,7 +38,6 @@ const Display = ({
     } finally {
       setIsLoading(false);
     }
-
   };
 
   return (
@@ -70,6 +69,7 @@ const Display = ({
         )}
         {templateIndex === 2 && (
           <ModernResume
+            ref={resumeRef}
             personalInfo={personalInfo}
             experiences={experiences}
             projects={projects}
