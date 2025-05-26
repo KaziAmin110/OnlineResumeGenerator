@@ -45,17 +45,9 @@ const Display = ({
       <Templates
         templateIndex={templateIndex}
         onUpdateTempIndex={setTemplateIndex}
+        handleDownloadPdf={handleDownloadPdf}
+        isLoading={isLoading}
       />
-      <div className="resume-buttons">
-        <button
-          className="download-btn"
-          onClick={handleDownloadPdf}
-          disabled={isLoading}
-        >
-          {isLoading ? "Downloading..." : "Download"}
-        </button>
-      </div>
-
       <div className="resume-background">
         {templateIndex === 1 && (
           <JakesResumeDisplay

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Templates = ({ onUpdateTempIndex }) => {
+const Templates = ({ onUpdateTempIndex, handleDownloadPdf, isLoading }) => {
   const handleUpdateTemplate = (templateNum) => {
     onUpdateTempIndex(templateNum);
   };
@@ -20,6 +20,13 @@ const Templates = ({ onUpdateTempIndex }) => {
           onClick={() => handleUpdateTemplate(2)}
         >
           Modern Resume
+        </button>
+        <button
+          className="download-btn"
+          onClick={handleDownloadPdf}
+          disabled={isLoading}
+        >
+          {isLoading ? "Downloading..." : "Download"}
         </button>
       </div>
     </div>
