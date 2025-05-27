@@ -42,6 +42,7 @@ const Display = ({
 
   return (
     <div className="display-container">
+      <h1>Resume:</h1>
       <Templates
         templateIndex={templateIndex}
         onUpdateTempIndex={setTemplateIndex}
