@@ -25,6 +25,12 @@
     font-size: 20px;
 }
 
+.display-section-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
 .download-btn {
     display: flex;;
     background-color: #007bff;
@@ -382,11 +388,9 @@ input {
 
 .input-sections-container {
     display: flex;
-    gap: 2rem;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     align-items: center;
-    min-height: 100vh;
 }
 
 .input-header {
