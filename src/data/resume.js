@@ -6,7 +6,7 @@ const personalInfoData = {
   uniGpa: 3.5,
   uniProgram: "Bachelor of Science in Computer Science",
   uniGraduation: "May 2026",
-  linkedIn: "linkedin.com/in/kazi-amin/",
+  linkedIn: "https://www.linkedin.com/in/kazi-amin/",
 };
 
 const experiencesData = [
@@ -55,7 +55,13 @@ const projectsData = [
   },
   {
     projectTitle: "Rate My Peer, Mobile Development Lead",
-    projectTechnologies: ["React.js", "Flutter", "Express", "PostgreSQL", "Jest"],
+    projectTechnologies: [
+      "React.js",
+      "Flutter",
+      "Express",
+      "PostgreSQL",
+      "Jest",
+    ],
     descriptions: [
       "Designed and led the development of a full-stack web and mobile application to assist instructors in monitoring team dynamics and individual performances using anonymous peer reviews.",
       "Developed and optimized key mobile and web features, including real-time peer review submission, performance analytics, and user authentication, using Flutter for mobile and React.js for web.",
@@ -64,7 +70,12 @@ const projectsData = [
   },
   {
     projectTitle: "Youtube Trending Data Analysis & ETL Pipeline",
-    projectTechnologies: ["Python", "Apache Airflow", "Amazon EC2", "Amazon S3"],
+    projectTechnologies: [
+      "Python",
+      "Apache Airflow",
+      "Amazon EC2",
+      "Amazon S3",
+    ],
     descriptions: [
       "Developed an ETL Data Pipeline using Apache Airflow to extract, transform, and load YouTube trending data automatically in batch processing mode.",
       "Performed data analysis using Python (Pandas, NumPy, Matplotlib, Seaborn) to identify key traits that contribute to a video’s likelihood of being on Youtube’s Trending Page.",
@@ -73,7 +84,14 @@ const projectsData = [
   },
   {
     projectTitle: "ContactVault, Frontend Lead",
-    projectTechnologies: ["Linux", "Apache", "MySQL", "PHP", "Docker", "Postman"],
+    projectTechnologies: [
+      "Linux",
+      "Apache",
+      "MySQL",
+      "PHP",
+      "Docker",
+      "Postman",
+    ],
     descriptions: [
       "Developed a secure full-stack CRUD web application enabling users to efficiently manage personal contacts using features such as user authentication and persistent, dynamic contact storage.",
       "Led the frontend team in designing and implementing the application using HTML, CSS, JavaScript, and Figma.",
