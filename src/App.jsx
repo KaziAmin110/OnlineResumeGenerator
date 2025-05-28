@@ -55,6 +55,9 @@ const App = () => {
           />
         </Section>
       </div>
+      <div className="resizer">
+
+      </div>
       <Display
         personalInfo={personalInfo}
         experiences={experiences}

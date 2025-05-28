@@ -7,6 +7,7 @@ const Templates = ({ onUpdateTempIndex, handleDownloadPdf, isLoading }) => {
 
   return (
     <div className="template-container">
+      <h1>Templates</h1>
       <div className="temp-buttons-container">
         <button
           className="template-btn"
