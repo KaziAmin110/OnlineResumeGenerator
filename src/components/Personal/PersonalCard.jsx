@@ -24,7 +24,8 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
   };
 
   const handlePersonalInfoUpdate = () => {
-    onUpdatePersonalInfo({ ...personalInfo, name, email, phone });
+    onUpdatePersonalInfo({ ...personalInfo, name, email, phone, linkedIn });
+    
   };
 
   return (
