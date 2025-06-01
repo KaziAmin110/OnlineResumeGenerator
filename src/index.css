@@ -30,7 +30,6 @@
     justify-content: center;
     background-color: #007bff;
     color: white;
-    margin-top: 25px;
     width: 100px;
     border: none;
     padding: 0.5rem 1rem;
@@ -87,7 +86,7 @@
 }
 
 .template-btn {
-    background-color: #007bff;
+    background-color: #164e89;
     color: white;
     width: 150px;
     border: none;
@@ -139,10 +138,11 @@
 
 .temp-buttons-container {
     display: flex;
-    min-width: 100%;
-    margin-top: 15px;
+    width: 100%;
+    gap: 1.25rem;
+    margin-top: 25px;
     justify-content: center;
-    gap: 150px;
+    align-items: center;
 }
 
 .title {
