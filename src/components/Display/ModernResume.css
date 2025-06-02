@@ -1,0 +1,136 @@
+/* ModernResume.css - Revised for Unique Class Names */
+
+
+
+.mr-container {
+  width: 8.5in; /* Standard paper width */
+  min-height: 11in; /* Standard paper height */
+  margin: 20px auto;
+  padding: 40px 50px; /* Generous padding */
+  background-color: #ffffff; /* White background for resume */
+  border: 1px solid #d1d1d1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* --- Header Section --- */
+.mr-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #4a4a4a; /* Darker border */
+}
+
+.mr-applicant-name {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2c3e50; /* Dark blue/grey for name */
+}
+
+.mr-contact-info {
+  font-size: 0.95em;
+  color: #555;
+}
+
+.mr-contact-info span,
+.mr-contact-info a {
+  margin: 0 6px;
+  color: #0073b1; /* LinkedIn-like blue for links */
+  text-decoration: none;
+}
+
+.mr-contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* --- Common Section Styling --- */
+.mr-section {
+  margin-bottom: 28px; /* Consistent spacing */
+}
+
+.mr-section-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #2c3e50; /* Matching name color */
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e1e4e8; /* Lighter border for section titles */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Summary Section --- */
+.mr-summary-section .mr-summary-text {
+  font-size: 1.05em; /* Slightly larger for readability */
+  text-align: left;
+  line-height: 1.7; /* Increased line height for summary */
+}
+
+/* --- Relevant Skills Section --- */
+.mr-skills-content .mr-skill-category-block {
+  margin-bottom: 18px;
+}
+
+.mr-skill-category-name {
+  font-size: 1.15em;
+  font-weight: 600; /* Bolder category name */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mr-skills-list {
+  list-style-type: disc;
+  margin-left: 25px; /* Indent list */
+  padding-left: 0;
+}
+
+.mr-skill-item {
+  font-size: 1em;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* --- Work History Section --- */
+.mr-work-history-content .mr-job-entry {
+  margin-bottom: 18px;
+  font-size: 1.05em;
+}
+
+.mr-job-entry .mr-job-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.mr-job-entry .mr-company-name {
+  font-style: normal; /* Changed from italic for a different style */
+  font-weight: 500; /* Medium weight */
+}
+
+.mr-job-entry .mr-company-location,
+.mr-job-entry .mr-job-dates {
+  color: #666; /* Slightly lighter for secondary info */
+  font-size: 0.9em;
+}
+
+/* --- Education Section --- */
+.mr-education-content .mr-education-entry {
+  margin-bottom: 12px;
+}
+
+.mr-institution-name {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #333;
+}
+
+.mr-degree-details,
+.mr-graduation-details {
+  font-size: 1.05em;
+  margin-left: 0; /* Remove indent if desired, or add back with margin-left: 10px; */
+}
+
+.mr-graduation-details {
+  color: #666;
+  font-size: 0.9em;
+}
