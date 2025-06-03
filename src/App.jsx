@@ -22,7 +22,6 @@ const App = () => {
   return (
     <div className="main-container">
       <div className="input-sections-container">
-        <h1 className="title">Resume Builder</h1>
         <Section section_name="Personal Section">
           <PersonalCard
             personalInfo={personalInfo}

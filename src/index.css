@@ -393,6 +393,7 @@ input {
     gap: 2rem;
     width: 50%;
     flex-direction: column;
+    justify-content: center;
     overflow: auto;
     margin: 10px 0px;
     padding: 10px;
