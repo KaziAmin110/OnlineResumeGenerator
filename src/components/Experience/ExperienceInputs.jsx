@@ -60,6 +60,7 @@ const ExperienceInputs = ({
         <h3 className="input-header">Enter Job Title:</h3>
         <input
           placeholder=""
+          name="jobTitle"
           onChange={handleChangeJobTitle}
           value={jobTitle}
         ></input>
@@ -68,6 +69,7 @@ const ExperienceInputs = ({
         <h3 className="input-header">Enter Company Name:</h3>
         <input
           placeholder=""
+          name="companyName"
           onChange={handleChangeCompanyName}
           value={companyName}
         ></input>
@@ -76,6 +78,7 @@ const ExperienceInputs = ({
         <h3 className="input-header">Enter Company Location:</h3>
         <input
           placeholder=""
+          name="companyLocation"
           onChange={handleChangeCompanyLocation}
           value={companyLocation}
         ></input>
@@ -84,6 +87,7 @@ const ExperienceInputs = ({
         <h3 className="input-header">Enter Position Start Date:</h3>
         <input
           placeholder=""
+          name="startDate"
           onChange={handleChangeStartDate}
           value={startDate}
         ></input>
@@ -92,6 +96,7 @@ const ExperienceInputs = ({
         <h3 className="input-header">Enter Position End Date:</h3>
         <input
           placeholder=""
+          name="endDate"
           onChange={handleChangeEndDate}
           value={endDate}
         ></input>

@@ -29,6 +29,7 @@ const ProjectInputs = ({ projects, onUpdateProjects }) => {
         <h3 className="input-header">Enter Project Title:</h3>
         <input
           placeholder=""
+          name="projectTitle"
           onChange={handleChangeProjectTitle}
           value={projectTitle}
         ></input>

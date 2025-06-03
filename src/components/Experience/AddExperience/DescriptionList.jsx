@@ -35,6 +35,8 @@ const DescriptionList = ({
       <div className="description-item-container">
         <input
           placeholder=""
+          name="descriptionInput"
+          className="description-input"
           onChange={handleChangeDescriptionInput}
           value={descriptionInput}
         ></input>

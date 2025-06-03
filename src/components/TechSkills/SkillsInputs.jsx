@@ -4,7 +4,6 @@ import DescriptionList from "../Experience/AddExperience/DescriptionList";
 const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
   const [skills, setSkills] = useState([]);
   const [skillHeaderInput, setSkillHeaderInput] = useState("");
-  const [skillInput, setSkillInput] = useState("");
 
   const handleAddSkillsSection = () => {
     setSkillsSection([
@@ -12,21 +11,11 @@ const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
       { sectionName: skillHeaderInput, sectionSkills: skills },
     ]);
     setSkillHeaderInput("");
-    setSkillInput("");
     setSkills([]);
-  };
-
-  const handleAddSkill = () => {
-    setSkills([...skills, skillInput]);
-    setSkillInput("");
   };
 
   const onChangeSkillHeaderInput = (e) => {
     setSkillHeaderInput(e.target.value);
-  };
-
-  const onChangeSkillInput = (e) => {
-    setSkillInput(e.target.value);
   };
 
   return (
@@ -35,6 +24,7 @@ const SkillsInputs = ({ skillsSections, setSkillsSection }) => {
         <h3 className="input-header">Enter Header Name:</h3>
         <input
           value={skillHeaderInput}
+          name="skillHeaderInput"
           onChange={onChangeSkillHeaderInput}
         ></input>
       </div>
