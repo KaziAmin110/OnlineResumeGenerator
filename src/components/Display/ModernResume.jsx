@@ -7,80 +7,82 @@ const ModernResume = React.forwardRef(
     const { uniName, uniGpa, uniProgram, uniGraduation } = personalInfo || {};
 
     return (
-      <div className="mr-container" ref={ref}>
-        {/* Header Section */}
-        <header className="mr-header">
-          <h1 className="mr-applicant-name">{name}</h1>
-          <div className="mr-contact-info">
+      <div className="resume-container-mr" ref={ref}>
+        <header className="resume-header-mr">
+          <div className="header-top-border-mr"></div>
+          <h1>{name}</h1>
+          <div className="contact-info-mr">
+            <span>{email}</span>
+            <span>&bull;</span>
+            <span>{phone}</span>
+            <span>&bull;</span>
             <span>{linkedIn}</span>
-            <span> • </span>
-            <a href={`mailto:${email}`}>{email}</a>
-            <span> • </span>
-            <a href={`tel:${phone}`}>{phone}</a>
+            {/* <span>twitter.com/Richard_Williams</span> Or website */}
           </div>
+          <p className="header-summary-mr">
+            Financial Advisor with 7+ years of experience delivering
+            financial/investment advisory services to high-value clients. Proven
+            success in managing multi-million dollar portfolios, driving
+            profitability, and increasing ROI through skillful strategic
+            planning, consulting, and financial/subsidy services.
+          </p>
         </header>
 
-        {/* Summary Section */}
-        <section className="mr-section mr-summary-section">
-          <p className="mr-summary-text">Summary</p>
-        </section>
+        <hr className="section-divider-mr" />
 
-        {/* Relevant Skills Section */}
-        <section className="mr-section mr-relevant-skills-section">
-          <h2 className="mr-section-title">Relevant Skills</h2>
-          <div className="mr-skills-content">
-            {technicalSkillsHeaders &&
-              technicalSkillsHeaders.map((skillCategory) => (
-                <div
-                  key={skillCategory.sectionName}
-                  className="mr-skill-category-block"
-                >
-                  <h3 className="mr-skill-category-name">
-                    {skillCategory.sectionName}
-                  </h3>
-                  <ul className="mr-skills-list">
-                    {skillCategory.sectionSkills.map((skill, index) => (
-                      <li key={index} className="mr-skill-item">
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
+        <section className="resume-section-mr">
+          <h3>PROFESSIONAL EXPERIENCE</h3>
+
+          {experiences.map((experience) => {
+            return (
+              <div className="experience-item-mr" key={experience.jobTitle}>
+                <div className="experience-header-mr">
+                  <h4>{experience.companyName}</h4>
+                  <span>{experience.companyLocation}</span>
                 </div>
-              ))}
-          </div>
-        </section>
-
-        {/* Work History Section */}
-        <section className="mr-section mr-work-history-section">
-          <h2 className="mr-section-title">Work History</h2>
-          <div className="mr-work-history-content">
-            {experiences &&
-              experiences.map((job, index) => (
-                <div key={index} className="mr-job-entry">
-                  <span className="mr-job-title">{job.jobTitle}</span>,{" "}
-                  <span className="mr-company-name">{job.companyName}</span>,{" "}
-                  <span className="mr-company-location">{job.companyLocation}</span>{" "}
-                  <span className="mr-job-dates">{job.startDate} - {job.endDate}</span>
+                <div className="experience-subheader-mr">
+                  <h5>{experience.jobTitle}</h5>
+                  <span>
+                    {experience.startDate} - {experience.endDate}
+                  </span>
                 </div>
-              ))}
-          </div>
+                <ul>
+                  {experience.descriptions.map((description, index) => {
+                    return <li key={index}>{description}</li>;
+                  })}
+                </ul>
+              </div>
+            );
+          })}
         </section>
 
-        {/* Education Section */}
-        <section className="mr-section mr-education-section">
-          <h2 className="mr-section-title">Education</h2>
-          <div className="mr-education-content">
-            <div className="mr-education-entry">
-              <h3 className="mr-institution-name">
-                {uniName}, {uniGraduation}
-              </h3>
-              <p className="mr-degree-details">{uniProgram}</p>
-              <p className="mr-graduation-details">
-                {uniGraduation}
-                {uniGpa && ` (GPA: ${uniGpa})`}
-              </p>
+        <hr className="section-divider-mr" />
+
+        <section className="resume-section-mr">
+          <h3>EDUCATION</h3>
+          <div className="education-item-mr">
+            <div className="education-header-mr">
+              <h4>{uniProgram}</h4>
+              <span>GPA: {uniGpa}</span>
+            </div>
+            <div className="education-subheader-mr">
+              {/* Corrected from image for better readability */}
+              <h5>{uniName}</h5>{" "}
+              {/* Corrected from image for better readability */}
+              <span>{uniGraduation}</span>
             </div>
           </div>
+        </section>
+
+        <hr className="section-divider-mr" />
+
+        <section className="resume-section-mr">
+          <h3>SKILLS</h3>
+          <ul className="skills-list-mr">
+            {technicalSkillsHeaders.map((header, index) => {
+              return <li key={index}>{header.sectionSkills}</li>;
+            })}
+          </ul>
         </section>
       </div>
     );
