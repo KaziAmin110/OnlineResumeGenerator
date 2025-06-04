@@ -1,14 +1,12 @@
 import React from "react";
 
 const Templates = ({
-  onUpdateTempIndex,
   handleDownloadPdf,
   isLoading,
   templateIndex,
   onUpdateTemplateIndex,
 }) => {
   const handleUpdateTemplate = (templateNum) => {
-    onUpdateTempIndex(templateNum);
     onUpdateTemplateIndex(templateNum);
   };
 

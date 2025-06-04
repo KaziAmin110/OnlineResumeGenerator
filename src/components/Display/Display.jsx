@@ -10,9 +10,9 @@ const Display = ({
   experiences,
   projects,
   techSkillsHeaders,
+  templateIndex,
   onUpdateTemplateIndex,
 }) => {
-  const [templateIndex, setTemplateIndex] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const resumeRef = useRef();
 
@@ -45,7 +45,6 @@ const Display = ({
     <div className="display-container">
       <Templates
         templateIndex={templateIndex}
-        onUpdateTempIndex={setTemplateIndex}
         handleDownloadPdf={handleDownloadPdf}
         isLoading={isLoading}
         onUpdateTemplateIndex={onUpdateTemplateIndex}

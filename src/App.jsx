@@ -62,6 +62,7 @@ const App = () => {
         experiences={experiences}
         projects={projects}
         techSkillsHeaders={techSections}
+        templateIndex={templateIndex}
         onUpdateTemplateIndex={setTemplateIndex}
       />
     </div>
