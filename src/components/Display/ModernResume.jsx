@@ -3,7 +3,7 @@ import "./ModernResume.css";
 
 const ModernResume = React.forwardRef(
   ({ personalInfo, experiences, technicalSkillsHeaders }, ref) => {
-    const { name, email, phone, linkedIn } = personalInfo || {};
+    const { name, email, phone, linkedIn, personalSummary } = personalInfo || {};
     const { uniName, uniGpa, uniProgram, uniGraduation } = personalInfo || {};
 
     return (
@@ -20,11 +20,7 @@ const ModernResume = React.forwardRef(
             {/* <span>twitter.com/Richard_Williams</span> Or website */}
           </div>
           <p className="header-summary-mr">
-            Financial Advisor with 7+ years of experience delivering
-            financial/investment advisory services to high-value clients. Proven
-            success in managing multi-million dollar portfolios, driving
-            profitability, and increasing ROI through skillful strategic
-            planning, consulting, and financial/subsidy services.
+            {personalSummary}
           </p>
         </header>
 

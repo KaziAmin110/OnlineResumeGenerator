@@ -6,6 +6,9 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
   const [email, setEmail] = useState(personalInfo.email);
   const [phone, setPhone] = useState(personalInfo.phone);
   const [linkedIn, setLinkedIn] = useState(personalInfo.linkedIn);
+  const [personalSummary, setPersonalSummary] = useState(
+    personalInfo.personalSummary
+  );
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -23,9 +26,12 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
     setLinkedIn(e.target.value);
   };
 
+  const handlePersonaSummaryChange = (e) => {
+    setPersonalSummary(e.target.value);
+  };
+
   const handlePersonalInfoUpdate = () => {
-    onUpdatePersonalInfo({ ...personalInfo, name, email, phone, linkedIn });
-    
+    onUpdatePersonalInfo({ ...personalInfo, name, email, phone, linkedIn, personalSummary });
   };
 
   return (
@@ -68,6 +74,16 @@ const PersonalCard = ({ personalInfo, onUpdatePersonalInfo }) => {
           placeholder="Enter LinkedIn:"
           value={linkedIn}
           onChange={handleLinkedinChange}
+        />
+      </div>
+      <div className="preview-container">
+        <h3 className="input-header">Enter Personal Summary: </h3>
+        <input
+          type="text"
+          name="summary"
+          placeholder="Enter LinkedIn:"
+          value={personalSummary}
+          onChange={handlePersonaSummaryChange}
         />
       </div>
       <button onClick={handlePersonalInfoUpdate} className="save-btn">
