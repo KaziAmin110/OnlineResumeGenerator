@@ -4,6 +4,7 @@ const Templates = ({
   onUpdateTempIndex,
   handleDownloadPdf,
   isLoading,
+  templateIndex,
   onUpdateTemplateIndex,
 }) => {
   const handleUpdateTemplate = (templateNum) => {
@@ -16,13 +17,13 @@ const Templates = ({
       <h1>Templates</h1>
       <div className="temp-buttons-container">
         <button
-          className="template-btn"
+          className={templateIndex === 1 ? "selected-template" : "template-btn"}
           onClick={() => handleUpdateTemplate(1)}
         >
           Jake's Resume
         </button>
         <button
-          className="template-btn"
+          className={templateIndex === 2 ? "selected-template" : "template-btn"}
           onClick={() => handleUpdateTemplate(2)}
         >
           Modern Resume

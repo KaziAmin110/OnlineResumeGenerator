@@ -25,6 +25,16 @@
     font-size: 20px;
 }
 
+.selected-template {
+    background-color: #439e05;
+    color: white;
+    width: 150px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
 .download-btn {
     display: flex;;
     justify-content: center;
@@ -119,6 +129,7 @@
   padding-right: 30px;
   background-color: #fff;
 }
+
 
 .resizer {
     width: 8px;
@@ -542,6 +553,11 @@ input {
     /* Ensure no extra padding that might interfere with html2pdf's margin option */
     padding: 0 !important;
     margin: 0 !important;
+  }
+
+  .resume-container-mr {
+    padding: 0;
+    margin: 0;
   }
 
   h1 { font-size: 18pt !important; } /* Reduce header size */
