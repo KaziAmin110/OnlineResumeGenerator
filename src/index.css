@@ -392,8 +392,9 @@ input {
     display: flex;
     gap: 2rem;
     width: 50%;
+    height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: auto;
     margin: 10px 0px;
     padding: 10px;
