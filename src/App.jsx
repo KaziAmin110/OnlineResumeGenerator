@@ -18,6 +18,7 @@ const App = () => {
   const [experiences, setExperiences] = useState(experiencesData);
   const [projects, setProjects] = useState(projectsData);
   const [techSections, setTechSections] = useState(techSectionsData);
+  const [templateIndex, setTemplateIndex] = useState(1);
 
   return (
     <div className="main-container">
@@ -26,6 +27,7 @@ const App = () => {
           <PersonalCard
             personalInfo={personalInfo}
             onUpdatePersonalInfo={setPersonalInfo}
+            templateIndex={templateIndex}
           />
         </Section>
 
@@ -54,14 +56,13 @@ const App = () => {
           />
         </Section>
       </div>
-      <div className="resizer">
-
-      </div>
+      <div className="resizer"></div>
       <Display
         personalInfo={personalInfo}
         experiences={experiences}
         projects={projects}
         techSkillsHeaders={techSections}
+        onUpdateTemplateIndex={setTemplateIndex}
       />
     </div>
   );

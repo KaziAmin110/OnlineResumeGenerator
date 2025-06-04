@@ -10,6 +10,7 @@ const Display = ({
   experiences,
   projects,
   techSkillsHeaders,
+  onUpdateTemplateIndex,
 }) => {
   const [templateIndex, setTemplateIndex] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,6 +48,7 @@ const Display = ({
         onUpdateTempIndex={setTemplateIndex}
         handleDownloadPdf={handleDownloadPdf}
         isLoading={isLoading}
+        onUpdateTemplateIndex={onUpdateTemplateIndex}
       />
       <div className="resume-background">
         {templateIndex === 1 && (
