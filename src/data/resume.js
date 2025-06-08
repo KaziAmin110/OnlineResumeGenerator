@@ -7,7 +7,7 @@ const personalInfoData = {
   uniProgram: "Bachelor of Science in Computer Science",
   uniGraduation: "May 2026",
   linkedIn: "https://www.linkedin.com/in/kazi-amin/",
-  personalSummary: "Software Engineer with 2+ years of experience in Frontend and Backend Frameworks. Passionate about problem-solving and continuous learning. Seeking a challenging role in the field of software development.",
+  personalSummary: "Software Engineer with 2+ years of experience in Frontend and Backend Frameworks. Passionate about problem-solving and using technology as a means of adding value to businesses and consumers alike. Seeking a challenging role in the field of software development.",
 };
 
 const experiencesData = [
