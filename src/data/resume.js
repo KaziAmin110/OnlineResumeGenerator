@@ -49,7 +49,7 @@ const projectsData = [
       "BullMQ",
     ],
     descriptions: [
-      "Developing a full-stack event management platform to help university organizations create, manage, and promote campus events with features like role-based access control, messaging, and payment processing.",
+      "Developing a full-stack event management platform to help university organizations create, manage, and promote campus events with features including role-based access control, real-timemessaging, and payment processing.",
       "Building RESTful APIs using Node.js and Express.js, ensuring efficient data handling as well as increased performance by implementing Redis caching and service concurrency techniques.",
       "Managing backend sprints in Jira, facilitating weekly meetings, and enforcing test-driven development with Jest to maintain high code quality.",
     ],
