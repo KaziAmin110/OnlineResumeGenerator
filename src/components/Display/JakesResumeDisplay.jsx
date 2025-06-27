@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { QRCodeSVG } from "qrcode.react";
+import { QRCodeCanvas } from "qrcode.react";
 
 const JakesResumeDisplay = React.forwardRef(
   (
@@ -30,21 +30,26 @@ const JakesResumeDisplay = React.forwardRef(
         resumeElement.scrollHeight > resumeElement.clientHeight ||
         resumeElement.scrollWidth > resumeElement.clientWidth;
       onUpdateResumeOverflow(isOverflowing);
-    }, [personalInfo, experiences, projects, technicalSkillsHeaders, onUpdateResumeOverflow, ref]);
+    }, [
+      personalInfo,
+      experiences,
+      projects,
+      technicalSkillsHeaders,
+      onUpdateResumeOverflow,
+      ref,
+    ]);
 
     return (
       <div className="resume-container" ref={ref}>
         <header id="resume-header">
-          <div className="header-content">
-            <div></div>
-            <h1 className="name">{name}</h1>
-            <QRCodeSVG
-              value={linkedIn}
-              size={40}
-              level="H"
-              includeMargin={true}
-            />
-          </div>
+          <h1 className="name">{name}</h1>
+          <QRCodeCanvas
+            value={linkedIn}
+            size={40}
+            level="H"
+            className="qr-code"
+            includeMargin={true}
+          />
           <div className="contact-info">
             <div className="contact-section">
               <strong>Email: </strong>
