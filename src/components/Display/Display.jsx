@@ -14,6 +14,7 @@ const Display = ({
   onUpdateTemplateIndex,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isResumeOverflow, setIsResumeOverflow] = useState(false);
   const resumeRef = useRef();
 
   const handleDownloadPdf = async () => {
@@ -29,7 +30,7 @@ const Display = ({
       filename: `${personalInfo.name}-resume.pdf`,
       image: { type: "jpeg", quality: 0.98 },
       html2canvas: { scale: 3, logging: true, dpi: 192, letterRendering: true },
-      jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+      jsPDF: { unit: "in", format: "letter", orientation: "portrait",},
     };
 
     try {
@@ -48,6 +49,7 @@ const Display = ({
         handleDownloadPdf={handleDownloadPdf}
         isLoading={isLoading}
         onUpdateTemplateIndex={onUpdateTemplateIndex}
+        isResumeOverflow={isResumeOverflow}
       />
       <div className="resume-background">
         {templateIndex === 1 && (
@@ -57,6 +59,7 @@ const Display = ({
             experiences={experiences}
             projects={projects}
             technicalSkillsHeaders={techSkillsHeaders}
+            onUpdateResumeOverflow={setIsResumeOverflow}
           />
         )}
         {templateIndex === 2 && (
@@ -66,6 +69,7 @@ const Display = ({
             experiences={experiences}
             projects={projects}
             technicalSkillsHeaders={techSkillsHeaders}
+            setIsResumeOverflow={setIsResumeOverflow}
           />
         )}
       </div>

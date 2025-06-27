@@ -5,6 +5,7 @@ const Templates = ({
   isLoading,
   templateIndex,
   onUpdateTemplateIndex,
+  isResumeOverflow,
 }) => {
   const handleUpdateTemplate = (templateNum) => {
     onUpdateTemplateIndex(templateNum);
@@ -27,16 +28,26 @@ const Templates = ({
           Modern Resume
         </button>
       </div>
-      <div className="template-header-subbar">
-        <ErrorDisplay errorMessage={"Example Warning"} />
+      {isResumeOverflow ? (
+        <div className="template-header-subbar">
+          <ErrorDisplay errorMessage={"Resume Overflow"} />
+          <button
+            className="template-btn"
+            onClick={handleDownloadPdf}
+            disabled={isLoading}
+          >
+            {isLoading ? "Downloading..." : "Download"}
+          </button>
+        </div>
+      ) : (
         <button
-          className="download-btn"
+          className="template-btn align-end"
           onClick={handleDownloadPdf}
           disabled={isLoading}
         >
           {isLoading ? "Downloading..." : "Download"}
         </button>
-      </div>
+      )}
     </div>
   );
 };

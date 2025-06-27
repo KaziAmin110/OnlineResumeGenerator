@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ModernResume.css";
 
 const ModernResume = React.forwardRef(
-  ({ personalInfo, experiences, technicalSkillsHeaders }, ref) => {
-    const { name, email, phone, linkedIn, personalSummary } = personalInfo || {};
+  (
+    { personalInfo, experiences, technicalSkillsHeaders, setIsResumeOverflow },
+    ref
+  ) => {
+    const { name, email, phone, linkedIn, personalSummary } =
+      personalInfo || {};
     const { uniName, uniGpa, uniProgram, uniGraduation } = personalInfo || {};
+
+    // Effect to check if the resume content overflows
+    useEffect(() => {
+      const resumeElement = ref.current;
+      const isOverflowing =
+        resumeElement.scrollHeight > resumeElement.clientHeight ||
+        resumeElement.scrollWidth > resumeElement.clientWidth;
+      setIsResumeOverflow(isOverflowing);
+    }, [
+      personalInfo,
+      experiences,
+      technicalSkillsHeaders,
+      setIsResumeOverflow,
+      ref,
+    ]);
 
     return (
       <div className="resume-container-mr" ref={ref}>
@@ -19,15 +38,13 @@ const ModernResume = React.forwardRef(
             <span>{linkedIn}</span>
             {/* <span>twitter.com/Richard_Williams</span> Or website */}
           </div>
-          <p className="header-summary-mr">
-            {personalSummary}
-          </p>
+          <p className="header-summary-mr">{personalSummary}</p>
         </header>
 
         <hr className="section-divider-mr" />
 
         <section className="resume-section-mr">
-          <h3>PROFESSIONAL EXPERIENCE</h3>
+          <h3>EXPERIENCE</h3>
 
           {experiences.map((experience) => {
             return (

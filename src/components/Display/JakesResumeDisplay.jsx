@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { QRCodeSVG } from "qrcode.react";
 
 const JakesResumeDisplay = React.forwardRef(
-  ({ personalInfo, experiences, projects, technicalSkillsHeaders }, ref) => {
+  (
+    {
+      personalInfo,
+      experiences,
+      projects,
+      technicalSkillsHeaders,
+      onUpdateResumeOverflow,
+    },
+    ref
+  ) => {
     const {
       name,
       email,
@@ -13,6 +22,15 @@ const JakesResumeDisplay = React.forwardRef(
       uniProgram,
       uniGraduation,
     } = personalInfo;
+
+    // Effect to check if the resume content overflows
+    useEffect(() => {
+      const resumeElement = ref.current;
+      const isOverflowing =
+        resumeElement.scrollHeight > resumeElement.clientHeight ||
+        resumeElement.scrollWidth > resumeElement.clientWidth;
+      onUpdateResumeOverflow(isOverflowing);
+    }, [personalInfo, experiences, projects, technicalSkillsHeaders, onUpdateResumeOverflow, ref]);
 
     return (
       <div className="resume-container" ref={ref}>
