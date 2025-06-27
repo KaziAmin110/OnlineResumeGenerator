@@ -1,4 +1,4 @@
-import React from "react";
+import ErrorDisplay from "./ErrorDisplay";
 
 const Templates = ({
   handleDownloadPdf,
@@ -27,13 +27,16 @@ const Templates = ({
           Modern Resume
         </button>
       </div>
-      <button
-        className="download-btn"
-        onClick={handleDownloadPdf}
-        disabled={isLoading}
-      >
-        {isLoading ? "Downloading..." : "Download"}
-      </button>
+      <div className="template-header-subbar">
+        <ErrorDisplay errorMessage={"Example Warning"} />
+        <button
+          className="download-btn"
+          onClick={handleDownloadPdf}
+          disabled={isLoading}
+        >
+          {isLoading ? "Downloading..." : "Download"}
+        </button>
+      </div>
     </div>
   );
 };

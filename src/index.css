@@ -35,17 +35,23 @@
     cursor: pointer;
 }
 
+.template-header-subbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .download-btn {
     display: flex;;
     justify-content: center;
     background-color: #007bff;
+    align-items: center;
     color: white;
     width: 100px;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    align-self: flex-end;
 }
 
 .editable-container {
@@ -122,8 +128,6 @@
   flex-direction: column;
   width: 820px; 
   height: 1030px;
-  margin: 0px auto;
-  padding: 10px; 
   overflow: hidden;
   padding-left: 30px;
   padding-right: 30px;
@@ -198,6 +202,7 @@
 #resume-header {
     text-align: center;
     padding-bottom: 4px;
+    margin-top: 5px;
 }
 
 #resume-header .name {
@@ -480,6 +485,18 @@ input {
 .split-between {
     display: flex;
     justify-content: space-between;
+}
+
+.overflow-warning {
+    background-color: darkgoldenrod;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    border-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

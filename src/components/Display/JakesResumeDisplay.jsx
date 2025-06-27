@@ -75,7 +75,7 @@ const JakesResumeDisplay = React.forwardRef(
         </section>
 
         <section id="work-experience" className="resume-section">
-          <h2 className="section-title">Work Experience</h2>
+          <h2 className="section-title">Experience</h2>
           <div className="section-content">
             {experiences.map((experience) => {
               return (
